@@ -36,7 +36,7 @@ export class WallpapersListComponent implements OnInit {
     }
   };
 
-  public images: string[] = [];
+  public images: any[] = [];
 
   constructor(private readonly wallpapersService: WallpapersService) { }
 
@@ -45,7 +45,7 @@ export class WallpapersListComponent implements OnInit {
     this.wallpapersService.getInstagramFeed().subscribe((response: any) => {
 
       response.data.forEach(item => {
-        this.images.push(item.images.standard_resolution.url);
+        this.images.push(item.images);
       });
 
       console.log(this.images);
