@@ -7,6 +7,9 @@ import { BackendRoutingModule } from './backend-routing.module';
 import { UsersListModule } from './users/users-list/users-list.module';
 import { ViewUserModule } from './users/view-user/view-user.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { MessagesListModule } from './messages/messages-list/messages-list.module';
+import { PostsListModule } from './posts/posts-list/posts-list.module';
+import { WallpapersListModule } from './wallpappers/wallpapers-list/wallpapers-list.module';
 
 @NgModule({
   imports: [
@@ -14,6 +17,9 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     ThemeModule,
     NbMenuModule,
     UsersListModule,
+    MessagesListModule,
+    PostsListModule,
+    WallpapersListModule,
     ViewUserModule,
     NbCardModule,
     NbTreeGridModule,

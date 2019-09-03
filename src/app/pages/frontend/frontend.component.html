@@ -1,24 +1,150 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-    <h1>
-      Welcome to !
-    </h1>
-    <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-  </div>
-  <h2>Here are some links to help you start: </h2>
-  <ul>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-    </li>
-    <li>
-      <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-    </li>
-    <li>
-      <h2><a rel="noopener" [routerLink]="[ '/admin' ]">Go to Admin</a></h2>
-    </li>
-  </ul>
-  
-  <router-outlet></router-outlet>
+<body>
+  <section class="d-flex flex-column justify-content-between" id="hero" style="background-image: '../../../assets/frontend/img/nathan/nathan_background.jpg'">
+    <div id="hero-top">
+      <div id="big-logo">
+      </div>
+      <nav class="navbar navbar-light navbar-expand-md" id="menu-list">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav mx-auto">
+              <div id="horizontal-line"></div>
+              <li class="nav-item" role="presentation"><a class="nav-link active" href="#">Acceuil</a>
+              </li>
+              <div id="horizontal-line"></div>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#story-section">Histoire</a></li>
+              <div id="horizontal-line"></div>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#collection">Galerie</a>
+              </li>
+              <div id="horizontal-line"></div>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#">Wallpaper </a></li>
+              <div id="horizontal-line"></div>
+              <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact </a></li>
+              <div id="horizontal-line"></div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <section class="d-flex align-items-center">
+    <div id="story">
+      <div id="big-logo">
+      </div>
+      <div id="story-text">
+        <div id="story-top">
+          <p>
+            C'est en 2004 que Nathan Haetty a la conviction que sa vie se fera autour de l'automobile. Depuis cet
+            instant il n'aura de cesse d'observer les voitures sous tout les angles pour en capter l'émotion qu'elles
+            dégagent. "Je considère que chaque voiture
+            a une âme, de par son histoire et la facon dont ses volumes jouent avec les ombres et les lumières". Il
+            décide de conjuger cet amour pour le design automobile avec son envie de surprendre pour proposer des
+            créations uniques qui
+            cassent les codes. A la sortie de chaque nouvelle réalisation il succite l'étonnement, avant que ses
+            créations ne deviennent des références.
+          </p>
+        </div>
+        <br>
+        <br>
+        <div id="story-middle">
+          <p style="font-size: 18px; display:inline-block">
+            <b>"J'habille les voitures, je vois mon travail comme de la haute-couture pour automobile". </b>
+          </p>
+        </div>
+        <br>
+        <br>
+        <div id="story-bottom">
+          <p>
+            Sa force c'est de s'adapter aux projets pour que chacun puisse avoir le design qui lui correspond. De
+            quelques bandes dessinés avec soin et précision à un design complet très coloré et dynamique. Pour se faire
+            il puise son inspiration dans l'univers du
+            street-art, du pop-art et de la mode en restant ouvert à tout ce qu'il peut voir et qui attire son oeil (une
+            ambiance lumineuse dans la rue, une expo de photos...).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="d-flex align-items-center" id="collection">
+    <div id="collection-div">
+      <div id="big-logo">
+      </div>
+      <div id="collection-title">
+        <h1>Collection</h1>
+      </div>
+      <div id="horizontal-line"></div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/POG RS6 PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/HURACAN PERFORMANTE SPYDER PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/MCLAREN PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/POG RS6 PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/HURACAN PERFORMANTE SPYDER PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card">
+            <img src="assets/frontend/img/nathan/HURACAN PERFORMANTE SPYDER PASSENGER PNG.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="assets/frontend/js/jquery.min.js"></script>
+  <script src="assets/frontend/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/frontend/js/bs-animation.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+  <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+</body>
+
+<router-outlet></router-outlet>

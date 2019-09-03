@@ -21,6 +21,9 @@ import {
 import { AuthenticationService } from './shared/services/authentication/authentication.service';
 import { TokenInterceptorService } from './shared/services/token-interceptor/token-interceptor.service';
 import { UsersService } from './shared/services/users/users.service';
+import { MessagesService } from './shared/services/messages/messages.service';
+import { PostsService } from './shared/services/posts/posts.service';
+import { WxallpapersService } from './shared/services/wallpapers/wxallpapers.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,6 +48,9 @@ import { UsersService } from './shared/services/users/users.service';
   providers: [
     AuthenticationService,
     UsersService,
+    MessagesService,
+    PostsService,
+    WxallpapersService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,

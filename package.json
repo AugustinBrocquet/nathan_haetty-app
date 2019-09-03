@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@ckeditor/ckeditor5-angular": "^1.1.0",
+    "@ckeditor/ckeditor5-build-balloon": "^12.4.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
     "@nebular/auth": "^4.2.0",
     "@nebular/bootstrap": "^4.2.0",
