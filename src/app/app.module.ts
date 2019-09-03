@@ -23,7 +23,7 @@ import { TokenInterceptorService } from './shared/services/token-interceptor/tok
 import { UsersService } from './shared/services/users/users.service';
 import { MessagesService } from './shared/services/messages/messages.service';
 import { PostsService } from './shared/services/posts/posts.service';
-import { WxallpapersService } from './shared/services/wallpapers/wxallpapers.service';
+import { WallpapersService } from './shared/services/wallpapers/wallpapers.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -50,7 +50,7 @@ import { WxallpapersService } from './shared/services/wallpapers/wxallpapers.ser
     UsersService,
     MessagesService,
     PostsService,
-    WxallpapersService,
+    WallpapersService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
