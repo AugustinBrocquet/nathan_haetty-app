@@ -22,7 +22,16 @@ export class PostsService {
 
   createPost(post: Post) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post('http://localhost:3000/api/posts', post, { headers });
+
+    const formData = new FormData();
+    formData.append('title', post.title);
+    formData.append('description', post.description);
+    formData.append('picture', post.picture);
+    formData.append('sub_pictures', post.sub_pictures);
+
+    return this.http.post('http://localhost:3000/api/posts', formData, { headers });
+
+    // return this.http.post('http://localhost:3000/api/posts', post, { headers });
   }
 
   updatePost(post: Post) {

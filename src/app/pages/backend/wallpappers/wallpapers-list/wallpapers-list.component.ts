@@ -1,4 +1,3 @@
-import { MockDataModule } from './../../../../@core/mock/mock-data.module';
 import { Component, OnInit } from '@angular/core';
 import { WallpapersService } from 'src/app/shared/services/wallpapers/wallpapers.service';
 
