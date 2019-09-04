@@ -6,12 +6,6 @@
 
 <owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
   <div class="item" *ngFor="let image of images">
-
-    <ngx-image-zoom [circularLens]="true"[zoomMode]="'click'" [thumbImage]="image.thumbnail.url" [fullImage]="image.standard_resolution.url" [magnification]="1"
-      [enableScrollZoom]="true" [enableLens]="true" [lensWidth]="200">
-    </ngx-image-zoom>
-    <!-- <div class="slide-text">
-      <h4>test</h4>
-    </div> -->
+      <img class="slide-image" src="{{image.standard_resolution.url}}" >
   </div>
 </owl-carousel>
