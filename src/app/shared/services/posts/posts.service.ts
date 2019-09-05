@@ -27,11 +27,13 @@ export class PostsService {
     formData.append('title', post.title);
     formData.append('description', post.description);
     formData.append('picture', post.picture);
-    formData.append('sub_pictures', post.sub_pictures);
+
+    for (const file of post.sub_pictures) {
+      formData.append('sub_pictures', file);
+    }
 
     return this.http.post('http://localhost:3000/api/posts', formData, { headers });
 
-    // return this.http.post('http://localhost:3000/api/posts', post, { headers });
   }
 
   updatePost(post: Post) {
