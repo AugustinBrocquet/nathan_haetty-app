@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostsListComponent } from './posts-list.component';
 import { NbProgressBarModule } from '@nebular/theme';
-
+import { NbCardModule, NbTreeGridModule, NbIconModule, NbInputModule } from '@nebular/theme';
+import { ThemeModule } from 'src/app/@theme/theme.module';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 @NgModule({
@@ -12,6 +14,12 @@ import { NbProgressBarModule } from '@nebular/theme';
     CommonModule,
     FormsModule,
     NbProgressBarModule,
+    NbCardModule,
+    NbTreeGridModule,
+    NbIconModule,
+    NbInputModule,
+    ThemeModule,
+    Ng2SmartTableModule,
   ],
   exports: []
 })

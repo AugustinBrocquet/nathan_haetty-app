@@ -9,12 +9,54 @@ import { Post } from 'src/app/shared/interfaces/post.interface';
 })
 export class PostsListComponent implements OnInit {
 
+  settings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      postId: {
+        title: 'ID',
+        type: 'number',
+      },
+      title: {
+        title: 'Titre',
+        type: 'string',
+      },
+      picture: {
+        title: 'Photo',
+        type: 'string',
+      },
+    },
+  };
+
+  public posts: any[] = [];
   public post = {} as Post;
 
   constructor(private readonly postsService: PostsService) { }
 
   ngOnInit() {
+    this.postsService.getPosts().subscribe((data: any) => {
+      this.posts = data.map((elem) => {
+        return {
+          postId: elem._id,
+          ...elem
+        };
+      });
+      console.log(this.posts);
+    });
   }
+
 
   createPost() {
     this.postsService.createPost(this.post).subscribe((response) => {
@@ -38,6 +80,20 @@ export class PostsListComponent implements OnInit {
 
     }
     console.log(this.post);
+  }
+
+  onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  goToViewPost(event): void {
+    console.log(event);
+    console.log(`post/${event.data.postId}`);
+    // this.router.navigate([`/admin/user/${event.data.userId}`]);
   }
 
 }
