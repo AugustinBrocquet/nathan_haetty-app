@@ -10,9 +10,11 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { MessagesListModule } from './messages/messages-list/messages-list.module';
 import { PostsListModule } from './posts/posts-list/posts-list.module';
 import { WallpapersListModule } from './wallpappers/wallpapers-list/wallpapers-list.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
+    CommonModule,
     BackendRoutingModule,
     ThemeModule,
     NbMenuModule,

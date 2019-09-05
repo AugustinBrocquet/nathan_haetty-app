@@ -6,6 +6,8 @@ import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsen
 
 // Components
 import { FrontendComponent } from './frontend.component';
+import { CollectionComponent } from './collection/collection.component';
+import { CommonModule } from '@angular/common';
 
 
 // Services
@@ -30,6 +32,7 @@ const cookieConfig: NgcCookieConsentConfig = {
 
 @NgModule({
   imports: [
+    CommonModule,
     FrontendRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -37,6 +40,7 @@ const cookieConfig: NgcCookieConsentConfig = {
   ],
   declarations: [
     FrontendComponent,
+    CollectionComponent
   ],
   providers: []
 })
