@@ -1,0 +1,6 @@
+<p>instagram works!</p>
+<owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+  <div class="item" *ngFor="let image of images">
+    <img class="slide-image" src="{{image.standard_resolution.url}}">
+  </div>
+</owl-carousel>

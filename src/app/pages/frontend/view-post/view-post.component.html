@@ -1,0 +1,6 @@
+<img src="http://localhost:3000/img/{{post.picture}}" class="card-img-top" alt="...">
+<p>{{post.title}}</p>
+<p>{{post.description}}</p>
+<div >
+    <img *ngFor="let sub_picture of post.sub_pictures" src="http://localhost:3000/img/{{sub_picture}}" class="card-img-top" alt="...">   
+</div>

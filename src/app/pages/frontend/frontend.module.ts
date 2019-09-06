@@ -1,3 +1,4 @@
+import { InstagramModule } from './instagram/instagram.module';
 
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -8,6 +9,8 @@ import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsen
 import { FrontendComponent } from './frontend.component';
 import { CollectionComponent } from './collection/collection.component';
 import { CommonModule } from '@angular/common';
+import { ViewPostComponent } from './view-post/view-post.component';
+import { ViewPostModule } from './view-post/view-post.module';
 
 
 // Services
@@ -36,11 +39,13 @@ const cookieConfig: NgcCookieConsentConfig = {
     FrontendRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgcCookieConsentModule.forRoot(cookieConfig)
+    NgcCookieConsentModule.forRoot(cookieConfig),
+    InstagramModule,
+    ViewPostModule,
   ],
   declarations: [
     FrontendComponent,
-    CollectionComponent
+    CollectionComponent,
   ],
   providers: []
 })

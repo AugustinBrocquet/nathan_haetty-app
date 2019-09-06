@@ -10,11 +10,6 @@ export class WallpapersService {
   constructor(private http: HttpClient) {
   }
 
-  getInstagramFeed() {
-    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get('http://localhost:3000/api/instagram/images', { headers });
-  }
-
   getWallpapers() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
     return this.http.get('http://localhost:3000/api/wallpapers', { headers });
