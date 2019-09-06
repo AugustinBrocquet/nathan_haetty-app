@@ -24,6 +24,7 @@ import { UsersService } from './shared/services/users/users.service';
 import { MessagesService } from './shared/services/messages/messages.service';
 import { PostsService } from './shared/services/posts/posts.service';
 import { WallpapersService } from './shared/services/wallpapers/wallpapers.service';
+import { VideosService } from './shared/services/videos/videos.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -50,6 +51,7 @@ import { WallpapersService } from './shared/services/wallpapers/wallpapers.servi
     UsersService,
     MessagesService,
     PostsService,
+    VideosService,
     WallpapersService,
     {
       provide: HTTP_INTERCEPTORS,

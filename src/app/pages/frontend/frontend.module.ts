@@ -11,7 +11,7 @@ import { CollectionComponent } from './collection/collection.component';
 import { CommonModule } from '@angular/common';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { ViewPostModule } from './view-post/view-post.module';
-
+import { VideosListModule } from './videos/videos-list/videos-list.module';
 
 // Services
 
@@ -42,6 +42,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     NgcCookieConsentModule.forRoot(cookieConfig),
     InstagramModule,
     ViewPostModule,
+    VideosListModule,
   ],
   declarations: [
     FrontendComponent,

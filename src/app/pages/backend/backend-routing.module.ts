@@ -8,6 +8,7 @@ import { AuthAdminGuard } from 'src/app/shared/guards/auth/auth-admin.guard';
 import { MessagesListComponent } from './messages/messages-list/messages-list.component';
 import { WallpapersListComponent } from './wallpappers/wallpapers-list/wallpapers-list.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
+import { VideosListComponent } from './videos/videos-list/videos-list.component';
 
 
 const routes: Routes = [{
@@ -35,6 +36,10 @@ const routes: Routes = [{
     {
       path: 'posts',
       component: PostsListComponent,
+    },
+    {
+      path: 'videos',
+      component: VideosListComponent,
     },
     {
       path: '',

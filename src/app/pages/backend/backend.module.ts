@@ -11,6 +11,7 @@ import { MessagesListModule } from './messages/messages-list/messages-list.modul
 import { PostsListModule } from './posts/posts-list/posts-list.module';
 import { WallpapersListModule } from './wallpappers/wallpapers-list/wallpapers-list.module';
 import { CommonModule } from '@angular/common';
+import { VideosListModule } from './videos/videos-list/videos-list.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { CommonModule } from '@angular/common';
     MessagesListModule,
     PostsListModule,
     WallpapersListModule,
+    VideosListModule,
     ViewUserModule,
     NbCardModule,
     NbTreeGridModule,

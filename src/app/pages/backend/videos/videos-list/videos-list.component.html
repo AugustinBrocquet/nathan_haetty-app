@@ -1,0 +1,41 @@
+<nb-card>
+    <nb-card-header>
+      Videos
+    </nb-card-header>
+  
+    <nb-card-body>
+      <ng2-smart-table (userRowSelect)="goToViewVideo($event)" [settings]="settings" [source]="videos"
+        (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </nb-card-body>
+  
+    <hr />
+    <br />
+  
+  </nb-card>
+  
+  <form>
+    <div class="form-group">
+      <label for="titleVideo">Titre</label>
+      <input name="title" [(ngModel)]="video.title" type="text" class="form-control" id="titleVideo"
+        aria-describedby="emailHelp" placeholder="Titre">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="descriptionVideo">description</label>
+      <input name="description" [(ngModel)]="video.description" type="text" class="form-control" id="descriptionVideo"
+        placeholder="description">
+    </div>
+
+    <div class="form-group">
+        <label for="descriptionVideo">Path Youtube</label>
+        <input name="path_youtube" [(ngModel)]="video.path_youtube" type="text" class="form-control" id="pathYoutubeVideo"
+          placeholder="url youtube">
+    </div>
+  
+    <button type="button" (click)="createVideo()" class="btn btn-primary">Submit</button>
+  </form>
+  
+  <br />
+  <nb-progress-bar [value]="50"></nb-progress-bar>
+  
