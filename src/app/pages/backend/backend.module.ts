@@ -12,6 +12,8 @@ import { PostsListModule } from './posts/posts-list/posts-list.module';
 import { WallpapersListModule } from './wallpappers/wallpapers-list/wallpapers-list.module';
 import { CommonModule } from '@angular/common';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
+import { StoryModule } from './story/story.module';
+
 
 @NgModule({
   imports: [
@@ -24,6 +26,7 @@ import { VideosListModule } from './videos/videos-list/videos-list.module';
     PostsListModule,
     WallpapersListModule,
     VideosListModule,
+    StoryModule,
     ViewUserModule,
     NbCardModule,
     NbTreeGridModule,

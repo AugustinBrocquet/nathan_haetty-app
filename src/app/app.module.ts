@@ -1,3 +1,4 @@
+import { StoryService } from './shared/services/story/story.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -52,6 +53,7 @@ import { VideosService } from './shared/services/videos/videos.service';
     MessagesService,
     PostsService,
     VideosService,
+    StoryService,
     WallpapersService,
     {
       provide: HTTP_INTERCEPTORS,

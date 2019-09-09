@@ -1,0 +1,18 @@
+<h1>Paragraphe 0 </h1>
+
+<ckeditor [(ngModel)]="story.p0" [config]="editorConfig" [editor]="Editor" required data="" name="text">
+</ckeditor>
+
+
+<h1>Paragraphe 1 </h1>
+
+<ckeditor [(ngModel)]="story.p1" [config]="editorConfig" [editor]="Editor" required data="" name="text">
+</ckeditor>
+
+<h1>Paragraphe 2 </h1>
+
+<ckeditor [(ngModel)]="story.p2" [config]="editorConfig" [editor]="Editor" required data="" name="text">
+</ckeditor>
+
+<br />
+<button (click)="updateStory()">Enregistrer</button>

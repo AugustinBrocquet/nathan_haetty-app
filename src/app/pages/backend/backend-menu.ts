@@ -23,4 +23,9 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'shopping-cart-outline',
     link: '/admin/posts',
   },
+  {
+    title: 'Histoire',
+    icon: 'shopping-cart-outline',
+    link: '/admin/story',
+  },
 ];

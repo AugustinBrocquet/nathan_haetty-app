@@ -4,14 +4,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FrontendRoutingModule } from './frontend-routing.module';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
+import { AgmCoreModule } from '@agm/core';
 
 // Components
 import { FrontendComponent } from './frontend.component';
 import { CollectionComponent } from './collection/collection.component';
 import { CommonModule } from '@angular/common';
-import { ViewPostComponent } from './view-post/view-post.component';
 import { ViewPostModule } from './view-post/view-post.module';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
+import { ContactComponent } from './contact/contact.component';
+import { StoryComponent } from './story/story.component';
+import { environment } from 'src/environments/environment';
 
 // Services
 
@@ -43,10 +46,16 @@ const cookieConfig: NgcCookieConsentConfig = {
     InstagramModule,
     ViewPostModule,
     VideosListModule,
+    AgmCoreModule.forRoot({
+      apiKey: environment.google.maps_api_key,
+      libraries: ['geometry']
+    }),
   ],
   declarations: [
     FrontendComponent,
     CollectionComponent,
+    ContactComponent,
+    StoryComponent,
   ],
   providers: []
 })

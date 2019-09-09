@@ -9,6 +9,7 @@ import { MessagesListComponent } from './messages/messages-list/messages-list.co
 import { WallpapersListComponent } from './wallpappers/wallpapers-list/wallpapers-list.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { VideosListComponent } from './videos/videos-list/videos-list.component';
+import { StoryComponent } from './story/story.component';
 
 
 const routes: Routes = [{
@@ -40,6 +41,10 @@ const routes: Routes = [{
     {
       path: 'videos',
       component: VideosListComponent,
+    },
+    {
+      path: 'story',
+      component: StoryComponent,
     },
     {
       path: '',
