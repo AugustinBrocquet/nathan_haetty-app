@@ -14,5 +14,11 @@
 <ckeditor [(ngModel)]="story.p2" [config]="editorConfig" [editor]="Editor" required data="" name="text">
 </ckeditor>
 
+<div class="form-group">
+  <label for="pictureWallpaper">Photo Principale</label>
+  <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper"
+    placeholder="Photo principale">
+</div>
+
 <br />
 <button (click)="updateStory()">Enregistrer</button>

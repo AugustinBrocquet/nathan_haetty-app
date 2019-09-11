@@ -28,7 +28,12 @@ export class StoryComponent implements OnInit {
   updateStory(){
     this.storyService.updateStory(this.story).subscribe((response: any) => {
       console.log(response);
-    })
+    });
+  }
+
+  pictureChange(event) {
+    this.story.image = event.target.files[0];
+    console.log(this.story);
   }
 
 }
