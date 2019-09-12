@@ -3,6 +3,7 @@ import { NbLoginComponent, NbAuthSocialLink, NbAuthService, NB_AUTH_OPTIONS } fr
 import { AuthenticationService } from 'src/app/shared/services/authentication/authentication.service';
 import { Router } from '@angular/router';
 import { LoginUser } from 'src/app/shared/interfaces/login-user.interface';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-login',
@@ -37,6 +38,8 @@ export class LoginComponent extends NbLoginComponent implements OnInit {
     this.authenticationService.signIn(this.user).subscribe((response: any) => {
       console.log(response);
       localStorage.setItem('jwt-token', response.token);
+      const expiresAt = moment().add(response.expiresIn, 'second');
+      localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
       this.router.navigate(['/admin/users']);
     }, (error) => {
       console.log(error);

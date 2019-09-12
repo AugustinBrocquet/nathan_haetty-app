@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { FrontendComponent } from './frontend.component';
 import { InstagramComponent } from './instagram/instagram.component';
-import { ViewPostComponent } from './view-post/view-post.component';
 import { VideosListComponent } from './videos/videos-list/videos-list.component';
+import { ViewPostComponent } from './view-post/view-post.component';
 
 
 

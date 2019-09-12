@@ -13,7 +13,6 @@ export class AuthAdminGuard implements CanActivate, CanActivateChild {
   }
 
   canActivate(): boolean {
-    console.log('called')
     if (this.authenticationService.loggedIn()) {
       return true;
     } else {

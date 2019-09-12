@@ -25,7 +25,7 @@ export class StoryComponent implements OnInit {
     });
   }
 
-  updateStory(){
+  updateStory() {
     this.storyService.updateStory(this.story).subscribe((response: any) => {
       console.log(response);
     });
