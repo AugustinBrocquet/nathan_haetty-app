@@ -37,10 +37,11 @@ export class LoginComponent extends NbLoginComponent implements OnInit {
   signIn() {
     this.authenticationService.signIn(this.user).subscribe((response: any) => {
       console.log(response);
-      localStorage.setItem('jwt-token', response.token);
+      localStorage.setItem('jwt-token', response.data.token);
       const expiresAt = moment().add(response.expiresIn, 'second');
       localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
       this.router.navigate(['/admin/users']);
+      console.log('redirection');
     }, (error) => {
       console.log(error);
     });
