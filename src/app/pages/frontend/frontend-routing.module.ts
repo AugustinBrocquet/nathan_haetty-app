@@ -1,3 +1,4 @@
+import { HomeVideoComponent } from './home-video/home-video.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,10 @@ import { ViewPostComponent } from './view-post/view-post.component';
 const routes: Routes = [
   {
     path: '',
+    component: HomeVideoComponent,
+  },
+  {
+    path: 'home',
     component: FrontendComponent,
   },
   {

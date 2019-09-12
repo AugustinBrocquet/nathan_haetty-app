@@ -15,6 +15,7 @@ import { VideosListModule } from './videos/videos-list/videos-list.module';
 import { ContactComponent } from './contact/contact.component';
 import { StoryComponent } from './story/story.component';
 import { environment } from 'src/environments/environment';
+import { HomeVideoModule } from './home-video/home-video.module';
 
 // Services
 
@@ -46,6 +47,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     InstagramModule,
     ViewPostModule,
     VideosListModule,
+    HomeVideoModule,
     AgmCoreModule.forRoot({
       apiKey: environment.google.maps_api_key,
       libraries: ['geometry']
