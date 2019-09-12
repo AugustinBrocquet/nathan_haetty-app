@@ -1,43 +1,37 @@
 <nb-card>
-  <nb-card-header>
-    Posts
-  </nb-card-header>
+    <nb-card-header>
+        Posts
+    </nb-card-header>
 
-  <nb-card-body>
-    <ng2-smart-table (userRowSelect)="goToViewPost($event)" [settings]="settings" [source]="posts"
-      (deleteConfirm)="onDeleteConfirm($event)">
-    </ng2-smart-table>
-  </nb-card-body>
+    <nb-card-body>
+        <ng2-smart-table (userRowSelect)="goToViewPost($event)" [settings]="settings" [source]="posts" (deleteConfirm)="onDeleteConfirm($event)">
+        </ng2-smart-table>
+    </nb-card-body>
 
-  <hr />
-  <br />
+    <hr />
+    <br />
 
 </nb-card>
 
 <form>
-  <div class="form-group">
-    <label for="titleWallpaper">Titre</label>
-    <input name="title" [(ngModel)]="post.title" type="email" class="form-control" id="titleWallpaper"
-      aria-describedby="emailHelp" placeholder="Titre">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-  </div>
-  <div class="form-group">
-    <label for="descriptionWallpaper">description</label>
-    <input name="description" [(ngModel)]="post.description" type="text" class="form-control" id="descriptionWallpaper"
-      placeholder="description">
-  </div>
-  <div class="form-group">
-    <label for="pictureWallpaper">Photo Principale</label>
-    <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper"
-      placeholder="Photo principale">
-  </div>
-  <div class="form-group">
-    <label for="sub_picturesWallpaper">Photos complémentaires</label>
-    <input name="sub_pictures" (change)="subPicturesChange($event)" multiple type="file" class="form-control"
-      id="sub_picturesWallpaper" placeholder="Photos complémentaires">
-  </div>
+    <div class="form-group">
+        <label for="titleWallpaper">Titre</label>
+        <input name="title" [(ngModel)]="post.title" type="email" class="form-control" id="titleWallpaper" aria-describedby="emailHelp" placeholder="Titre">
+    </div>
+    <div class="form-group">
+        <label for="descriptionWallpaper">description</label>
+        <input name="description" [(ngModel)]="post.description" type="text" class="form-control" id="descriptionWallpaper" placeholder="description">
+    </div>
+    <div class="form-group">
+        <label for="pictureWallpaper">Photo Principale</label>
+        <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper" placeholder="Photo principale">
+    </div>
+    <div class="form-group">
+        <label for="sub_picturesWallpaper">Photos complémentaires</label>
+        <input name="sub_pictures" (change)="subPicturesChange($event)" multiple type="file" class="form-control" id="sub_picturesWallpaper" placeholder="Photos complémentaires">
+    </div>
 
-  <button type="button" (click)="createPost()" class="btn btn-primary">Submit</button>
+    <button type="button" (click)="createPost()" class="btn btn-primary">Submit</button>
 </form>
 
 <br />

@@ -9,7 +9,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true
   },
   {
-    title: 'Messages',
+    title: 'Contact',
     icon: 'shopping-cart-outline',
     link: '/admin/messages',
   },
@@ -19,7 +19,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/admin/wallpapers',
   },
   {
-    title: 'Articles',
+    title: 'Posts',
     icon: 'shopping-cart-outline',
     link: '/admin/posts',
   },

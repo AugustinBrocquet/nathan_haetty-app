@@ -40,7 +40,7 @@ export class MessagesListComponent implements OnInit {
         type: 'string',
       },*/
       content: {
-        title: 'E-mail',
+        title: 'Contenu',
         type: 'string',
       }
     },
