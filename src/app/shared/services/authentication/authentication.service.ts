@@ -1,3 +1,4 @@
+import { environment } from 'src/environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { LoginUser } from '../../interfaces/login-user.interface';
@@ -14,7 +15,7 @@ export class AuthenticationService {
 
   signIn(user: LoginUser) {
 
-    return this.http.post('http://localhost:3000/api/auth', user);
+    return this.http.post(`${environment.url_api}/auth`, user);
 
   }
 

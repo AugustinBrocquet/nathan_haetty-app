@@ -1,6 +1,7 @@
 import { Story } from './../../interfaces/story.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,29 +12,29 @@ export class StoryService {
 
   getStories() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get('http://localhost:3000/api/story', { headers });
+    return this.http.get(`${environment.url_api}/story`, { headers });
   }
 
   getStory(storyId: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`http://localhost:3000/api/story/${storyId}`, { headers });
+    return this.http.get(`${environment.url_api}/story/${storyId}`, { headers });
   }
 
   createStory(story: Story) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
 
-    return this.http.post('http://localhost:3000/api/story', story, { headers });
+    return this.http.post(`${environment.url_api}/story`, story, { headers });
 
   }
 
   updateStory(story: Story) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post('http://localhost:3000/api/story/update', story, { headers });
+    return this.http.post(`${environment.url_api}/story/update`, story, { headers });
   }
 
   deleteStory(storyId: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.delete(`http://localhost:3000/api/story/delete/${storyId}`, { headers });
+    return this.http.delete(`${environment.url_api}/story/delete/${storyId}`, { headers });
   }
 
 }

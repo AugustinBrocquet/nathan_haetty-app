@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +40,7 @@ export class InstagramService {
 
   getInstagramFeed() {
     // const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get('http://localhost:3000/api/instagram/images');
+    return this.http.get(`${environment.url_api}/instagram/images`);
   }
 
 }
