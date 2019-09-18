@@ -8,14 +8,16 @@ import { AgmCoreModule } from '@agm/core';
 
 // Components
 import { FrontendComponent } from './frontend.component';
-import { CollectionComponent } from './collection/collection.component';
 import { CommonModule } from '@angular/common';
-import { ViewPostModule } from './view-post/view-post.module';
+import { ViewPostModule } from './collection/view-post/view-post.module';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
 import { ContactComponent } from './contact/contact.component';
 import { StoryComponent } from './story/story.component';
 import { environment } from 'src/environments/environment';
 import { HomeVideoModule } from './home-video/home-video.module';
+import { PostsListModule } from './collection/posts-list/posts-list.module';
+import { MenuComponent } from 'src/app/components/frontend/menu/menu.component';
+import { FooterComponent } from 'src/app/@theme/components';
 
 // Services
 
@@ -45,6 +47,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     ReactiveFormsModule,
     NgcCookieConsentModule.forRoot(cookieConfig),
     InstagramModule,
+    PostsListModule,
     ViewPostModule,
     VideosListModule,
     HomeVideoModule,
@@ -55,9 +58,10 @@ const cookieConfig: NgcCookieConsentConfig = {
   ],
   declarations: [
     FrontendComponent,
-    CollectionComponent,
     ContactComponent,
     StoryComponent,
+    MenuComponent,
+    FooterComponent,
   ],
   providers: []
 })

@@ -2,11 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
 
 @Component({
-  selector: 'app-collection',
-  templateUrl: './collection.component.html',
-  styleUrls: ['./collection.component.scss']
+  selector: 'app-posts-list',
+  templateUrl: './posts-list.component.html',
+  styleUrls: ['./posts-list.component.scss'],
 })
-export class CollectionComponent implements OnInit, AfterViewInit {
+export class PostsListComponent implements OnInit, AfterViewInit {
 
   public posts: any[] = [];
 

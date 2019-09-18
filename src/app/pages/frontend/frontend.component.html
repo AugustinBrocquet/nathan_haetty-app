@@ -4,28 +4,11 @@
         <div id="hero-top">
             <div id="big-logo">
             </div>
-            <nav class="navbar navbar-light navbar-expand-md" id="menu-list">
-                <div class="container-fluid">
-                    <div class="collapse navbar-collapse" id="navcol-1">
-                        <ul class="nav navbar-nav mx-auto">
-                            <div id="horizontal-line"></div>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#story-section">Histoire</a></li>
-                            <div id="horizontal-line"></div>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#collection">Galerie</a>
-                            </li>
-                            <div id="horizontal-line"></div>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Wallpaper </a></li>
-                            <div id="horizontal-line"></div>
-                            <li class="nav-item" role="presentation"><a class="nav-link" href="#">Contact </a></li>
-                            <div id="horizontal-line"></div>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            <app-menu></app-menu>
         </div>
     </section>
-    <app-story></app-story>
-    <app-collection></app-collection>
+    <router-outlet></router-outlet>
+
     <app-contact></app-contact>
 
 
@@ -38,5 +21,3 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
 </body>
-
-<router-outlet></router-outlet>

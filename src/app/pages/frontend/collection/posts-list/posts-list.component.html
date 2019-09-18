@@ -1,0 +1,29 @@
+<section class="d-flex align-items-center" id="collection">
+
+    <div id="collection-div">
+      <div id="big-logo">
+      </div>
+      <div id="collection-title">
+        <h1>Collection</h1>
+      </div>
+      <div id="horizontal-line"></div>
+      <div class="row">
+        <a [routerLink]="['/front/post/', post.postId]" *ngFor="let post of posts">
+          <div class="col-sm-6" >
+  
+            <div class="card">
+              <img src="http://localhost:3000/img/{{post.picture}}" class="card-img-top animate pulse" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{ post.tile }}</h5>
+                <p class="card-text">{{ post.description }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+  
+      </div>
+    </div>
+  
+  
+  </section>
+  
