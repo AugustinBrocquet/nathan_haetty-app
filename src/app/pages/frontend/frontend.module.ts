@@ -17,7 +17,8 @@ import { environment } from 'src/environments/environment';
 import { HomeVideoModule } from './home-video/home-video.module';
 import { PostsListModule } from './collection/posts-list/posts-list.module';
 import { MenuComponent } from 'src/app/components/frontend/menu/menu.component';
-import { FooterComponent } from 'src/app/@theme/components';
+import { FooterComponent } from 'src/app/components/frontend/footer/footer.component';
+import { WallpapersModule } from './wallpapers/wallpapers.module';
 
 // Services
 
@@ -51,6 +52,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     ViewPostModule,
     VideosListModule,
     HomeVideoModule,
+    WallpapersModule,
     AgmCoreModule.forRoot({
       apiKey: environment.google.maps_api_key,
       libraries: ['geometry']

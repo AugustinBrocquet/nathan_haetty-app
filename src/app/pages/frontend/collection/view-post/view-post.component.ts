@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
 import { ActivatedRoute } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-view-post',
@@ -10,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewPostComponent implements OnInit, AfterViewInit {
 
   public post: any;
+  public baseUrl = environment.url_api;  
 
   constructor(private readonly postsService: PostsService, private route: ActivatedRoute) { }
 

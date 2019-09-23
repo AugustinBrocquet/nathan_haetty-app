@@ -13,7 +13,7 @@ export class PostsService {
 
   getPosts() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get('${environment.url_api}/posts', { headers });
+    return this.http.get(`${environment.url_api}/posts`, { headers });
   }
 
   getPost(postId: string) {

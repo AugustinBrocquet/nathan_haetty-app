@@ -7,6 +7,7 @@ import { FrontendComponent } from './frontend.component';
 import { InstagramComponent } from './instagram/instagram.component';
 import { VideosListComponent } from './videos/videos-list/videos-list.component';
 import { ViewPostComponent } from './collection/view-post/view-post.component';
+import { WallpapersComponent } from './wallpapers/wallpapers.component';
 
 
 
@@ -32,8 +33,8 @@ const routes: Routes = [
     component: InstagramComponent,
   },
   {
-    path: 'videos',
-    component: VideosListComponent,
+    path: 'wallpapers',
+    component: WallpapersComponent,
   },
 ];
 

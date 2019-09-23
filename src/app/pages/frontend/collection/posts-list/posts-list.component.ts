@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-posts-list',
@@ -9,6 +10,7 @@ import { PostsService } from 'src/app/shared/services/posts/posts.service';
 export class PostsListComponent implements OnInit, AfterViewInit {
 
   public posts: any[] = [];
+  public baseUrl = environment.url_api;
 
   constructor(private readonly postsService: PostsService) { }
 
