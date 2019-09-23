@@ -10,14 +10,13 @@ import { FrontendComponent } from './frontend.component';
 import { CommonModule } from '@angular/common';
 import { ViewPostModule } from './collection/view-post/view-post.module';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
-import { StoryComponent } from './story/story.component';
-import { environment } from 'src/environments/environment';
 import { HomeVideoModule } from './home-video/home-video.module';
 import { PostsListModule } from './collection/posts-list/posts-list.module';
 import { MenuComponent } from 'src/app/components/frontend/menu/menu.component';
 import { FooterComponent } from 'src/app/components/frontend/footer/footer.component';
 import { WallpapersModule } from './wallpapers/wallpapers.module';
 import { ContactModule } from './contact/contact.module';
+import { StoryModule } from './story/story.module';
 
 // Services
 
@@ -53,10 +52,10 @@ const cookieConfig: NgcCookieConsentConfig = {
     HomeVideoModule,
     ContactModule,
     WallpapersModule,
+    StoryModule,
   ],
   declarations: [
     FrontendComponent,
-    StoryComponent,
     MenuComponent,
     FooterComponent,
   ],

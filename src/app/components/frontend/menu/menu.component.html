@@ -3,14 +3,14 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mx-auto">
                 <div id="horizontal-line"></div>
-                <li class="nav-item" role="presentation"><a class="nav-link" (click)="scrollTo('story')">Histoire</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/front/story']">Histoire</a></li>
                 <div id="horizontal-line"></div>
                 <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/front/posts']">Galerie</a>
                 </li>
                 <div id="horizontal-line"></div>
                 <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/front/wallpapers']">Wallpaper </a></li>
                 <div id="horizontal-line"></div>
-                <li class="nav-item" role="presentation"><a class="nav-link" (click)="scrollTo('contact')">Contact </a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" [routerLink]="['/front/contact']">Contact </a></li>
                 <div id="horizontal-line"></div>
             </ul>
         </div>

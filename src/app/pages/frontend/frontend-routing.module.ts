@@ -9,6 +9,7 @@ import { VideosListComponent } from './videos/videos-list/videos-list.component'
 import { ViewPostComponent } from './collection/view-post/view-post.component';
 import { WallpapersComponent } from './wallpapers/wallpapers.component';
 import { ContactComponent } from './contact/contact.component';
+import { StoryComponent } from './story/story.component';
 
 
 
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'story',
+    component: StoryComponent,
   },
 ];
 
