@@ -4,14 +4,12 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FrontendRoutingModule } from './frontend-routing.module';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
-import { AgmCoreModule } from '@agm/core';
 
 // Components
 import { FrontendComponent } from './frontend.component';
 import { CommonModule } from '@angular/common';
 import { ViewPostModule } from './collection/view-post/view-post.module';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
-import { ContactComponent } from './contact/contact.component';
 import { StoryComponent } from './story/story.component';
 import { environment } from 'src/environments/environment';
 import { HomeVideoModule } from './home-video/home-video.module';
@@ -19,6 +17,7 @@ import { PostsListModule } from './collection/posts-list/posts-list.module';
 import { MenuComponent } from 'src/app/components/frontend/menu/menu.component';
 import { FooterComponent } from 'src/app/components/frontend/footer/footer.component';
 import { WallpapersModule } from './wallpapers/wallpapers.module';
+import { ContactModule } from './contact/contact.module';
 
 // Services
 
@@ -52,15 +51,11 @@ const cookieConfig: NgcCookieConsentConfig = {
     ViewPostModule,
     VideosListModule,
     HomeVideoModule,
+    ContactModule,
     WallpapersModule,
-    AgmCoreModule.forRoot({
-      apiKey: environment.google.maps_api_key,
-      libraries: ['geometry']
-    }),
   ],
   declarations: [
     FrontendComponent,
-    ContactComponent,
     StoryComponent,
     MenuComponent,
     FooterComponent,
