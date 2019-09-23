@@ -1,6 +1,19 @@
-<img src="{{baseUrl}}/img/{{post.picture}}" class="card-img-top" alt="...">
-<p>{{post.title}}</p>
-<p>{{post.description}}</p>
-<div >
-    <img *ngFor="let sub_picture of post.sub_pictures" src="{{baseUrl}}/img/{{sub_picture}}" class="card-img-top" alt="...">   
+<div id="view_post">
+    <div id="big-logo">
+    </div>
+    <div id="collection-title">
+        <h1>Collection</h1>
+    </div>
+    <div id="horizontal-line"></div>
+    <div id="image_view_post">
+        <img src="../../../../../assets/frontend/img/nathan/POGTADOR 1b.png" class="card-img-top" alt="...">
+    </div>
+    <div id="description_view_post">
+        <p>{{post.title}}</p>
+        <p>{{post.description}}</p>
+    </div>
+    <div>
+        <img *ngFor="let sub_picture of post.sub_pictures" src="../../../../../assets/frontend/img/nathan/POGTADOR 1b.png" class="card-img-top"
+            alt="...">
+    </div>
 </div>

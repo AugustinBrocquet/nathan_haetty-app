@@ -12,5 +12,5 @@ export const environment = {
       appId: '1:917965703973:web:a527c862d035fc47bca8cc'
     },
   },
-  url_api: 'https://a8a7d32d.ngrok.io/api',
+  url_api: 'https://6dcfac31.ngrok.io/api',
 };

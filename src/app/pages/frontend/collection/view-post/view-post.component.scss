@@ -1,0 +1,33 @@
+#view_post{
+    background-color:black;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#big-logo{
+    background-image: url('../../../../../assets/frontend/img/nathan/nathan_logo_white.png')
+}
+
+#image_view_post{
+    width:800px !important;
+    height:600px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+}
+
+#horizontal-line {
+    width: 700px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 0 auto;
+    position: relative;
+}
+
+#description_view_post{
+    text-align: center;
+    color:white;
+}
+
+html, body {
+    height: 100%;
+  }
