@@ -28,6 +28,10 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
     });
   }
 
+  goToInstagramPost(event: any) {
+    console.log(event);
+  }
+
   ngAfterViewInit() {
     document.getElementById('nb-global-spinner').style.display = 'none';
   }
