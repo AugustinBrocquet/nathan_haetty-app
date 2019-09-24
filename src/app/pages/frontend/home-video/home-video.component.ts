@@ -17,7 +17,7 @@ export class HomeVideoComponent implements OnInit, AfterViewInit {
   }
 
   gotoHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/front/home']);
   }
 
   ngAfterViewInit() {

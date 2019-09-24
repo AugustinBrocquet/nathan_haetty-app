@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FrontendRoutingModule } from './frontend-routing.module';
 import { NgImageSliderModule } from 'ng-image-slider';
-import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
 // Components
@@ -57,7 +56,6 @@ const cookieConfig: NgcCookieConsentConfig = {
     WallpapersModule,
     StoryModule,
     NgImageSliderModule,
-    NgxUsefulSwiperModule
   ],
   declarations: [
     FrontendComponent,

@@ -48,6 +48,10 @@ const routes: Routes = [
     component: StoryComponent,
   },
   {
+    path: 'videos',
+    component: VideosListComponent,
+  },
+  {
     path: 'test',
     component: InstagramCarouselComponent,
   },

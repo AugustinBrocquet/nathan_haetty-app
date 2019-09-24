@@ -36,6 +36,7 @@
     "cookieconsent": "^3.1.1",
     "eva-icons": "^1.1.1",
     "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "moment": "^2.24.0",
     "nebular-icons": "^1.1.0",
@@ -52,7 +53,6 @@
     "roboto-fontface": "^0.10.0",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.5.2",
-    "swiper": "^5.0.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
@@ -64,7 +64,6 @@
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
-    "@types/swiper": "^4.4.5",
     "codelyzer": "^5.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
