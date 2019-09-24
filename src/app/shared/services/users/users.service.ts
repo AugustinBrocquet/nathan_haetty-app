@@ -11,12 +11,12 @@ export class UsersService {
 
   getUsers() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`${environment.url_api}/users`, { headers });
+    return this.http.get(`${environment.url_api}/api/users`, { headers });
   }
 
   checkTokenResetPassword(token: string) {
     console.log(token);
-    return this.http.post(`${environment.url_api}/users/auth/check-request-password-token`, { token });
+    return this.http.post(`${environment.url_api}/api/users/auth/check-request-password-token`, { token });
   }
 
 }

@@ -15,7 +15,7 @@ export class AuthenticationService {
 
   signIn(user: LoginUser) {
 
-    return this.http.post(`${environment.url_api}/auth`, user);
+    return this.http.post(`${environment.url_api}/api/auth`, user);
 
   }
 

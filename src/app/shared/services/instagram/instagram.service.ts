@@ -40,7 +40,7 @@ export class InstagramService {
 
   getInstagramFeed() {
     // const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`${environment.url_api}/instagram/images`);
+    return this.http.get(`${environment.url_api}/api/instagram/images`);
   }
 
 }

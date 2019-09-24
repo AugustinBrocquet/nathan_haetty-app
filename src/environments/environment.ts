@@ -13,10 +13,10 @@ export const environment = {
       projectId: 'nathan-haetty',
       storageBucket: '',
       messagingSenderId: '917965703973',
-      appId: '1:917965703973:web:a527c862d035fc47bca8cc'
+      appId: '1:917965703973:web:a527c862d035fc47bca8cc',
     },
   },
-  url_api: 'https://6dcfac31.ngrok.io/api',
+  url_api: 'https://b45b997b.ngrok.io',
 };
 
 /*

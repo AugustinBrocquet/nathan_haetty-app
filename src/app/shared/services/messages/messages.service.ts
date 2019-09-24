@@ -11,7 +11,7 @@ export class MessagesService {
 
   getMessages() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`${environment.url_api}/messages`, { headers });
+    return this.http.get(`${environment.url_api}/api/messages`, { headers });
   }
 
 }

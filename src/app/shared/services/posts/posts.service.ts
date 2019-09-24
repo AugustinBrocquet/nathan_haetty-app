@@ -13,12 +13,12 @@ export class PostsService {
 
   getPosts() {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`${environment.url_api}/posts`, { headers });
+    return this.http.get(`${environment.url_api}/api/posts`, { headers });
   }
 
   getPost(postId: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.get(`${environment.url_api}/posts/${postId}`, { headers });
+    return this.http.get(`${environment.url_api}/api/posts/${postId}`, { headers });
   }
 
   createPost(post: Post) {
@@ -33,18 +33,18 @@ export class PostsService {
       formData.append('sub_pictures', file);
     }
 
-    return this.http.post(`${environment.url_api}/posts`, formData, { headers });
+    return this.http.post(`${environment.url_api}/api/posts`, formData, { headers });
 
   }
 
   updatePost(post: Post) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post(`${environment.url_api}/posts/update`, post, { headers });
+    return this.http.post(`${environment.url_api}/api/posts/update`, post, { headers });
   }
 
   deletePost(postId: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.delete(`${environment.url_api}/posts/delete/${postId}`, { headers });
+    return this.http.delete(`${environment.url_api}/api/posts/delete/${postId}`, { headers });
   }
 
 
