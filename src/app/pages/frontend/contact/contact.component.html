@@ -5,26 +5,34 @@
             <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
         </div>
         <form method="post">
-            <h3>Drop Us a Message</h3>
+            <h3>Partagz nous votre projet</h3>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                        <input type="text" name="fullname" class="form-control" placeholder="Votre nom *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                        <input type="text" name="email" class="form-control" placeholder="Adresse email *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
+                        <input type="text" name="phone" class="form-control" placeholder="Numero de téléphoner *"
                             value="" />
                     </div>
                     <div class="form-group">
-                        <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                        <input type="file" multiple name="pictures" class="form-control" placeholder="Déposer des photos"
+                            value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="file" multiple name="videos" class="form-control" placeholder="Déposer des videos"
+                            value="" />
+                    </div>    
+                    <div class="form-group">
+                        <input type="submit" name="btnSubmit" class="btnContact" value="Envoyer" />
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
-                        <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
+                        <textarea name="txtMsg" class="form-control" placeholder="Votre message *"
                             style="width: 100%; height: 150px;"></textarea>
                     </div>
                 </div>

@@ -20,6 +20,7 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
         img.image = item.images.standard_resolution.url;
         img.thumbImage = item.images.thumbnail.url;
         img.title = item.caption.text;
+        img.instagram_post = item.link;
         this.images.push(img);
       });
 
@@ -31,7 +32,7 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
   goToInstagramPost(event: any) {
     console.log(event);
     
-    console.log(this.slider);
+    // console.log(this.slider);
   }
 
   ngAfterViewInit() {
