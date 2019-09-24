@@ -10,6 +10,7 @@ import { ViewPostComponent } from './collection/view-post/view-post.component';
 import { WallpapersComponent } from './wallpapers/wallpapers.component';
 import { ContactComponent } from './contact/contact.component';
 import { StoryComponent } from './story/story.component';
+import { InstagramCarouselComponent } from 'src/app/components/frontend/instagram-carousel/instagram-carousel.component';
 
 
 
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'story',
     component: StoryComponent,
+  },
+  {
+    path: 'test',
+    component: InstagramCarouselComponent,
   },
 ];
 

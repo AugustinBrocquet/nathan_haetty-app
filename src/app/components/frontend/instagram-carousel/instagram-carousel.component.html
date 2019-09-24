@@ -1,0 +1,6 @@
+<ng-image-slider  [infinite]="true"[images]="images" #nav></ng-image-slider>
+<swiper [config]="config" #usefulSwiper>
+    <div class="swiper-wrapper">
+      <img *ngFor="let image of images2" class="swiper-slide"  [src]="image" />
+    </div>
+  </swiper>

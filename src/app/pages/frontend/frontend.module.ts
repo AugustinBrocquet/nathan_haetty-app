@@ -3,6 +3,8 @@ import { InstagramModule } from './instagram/instagram.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FrontendRoutingModule } from './frontend-routing.module';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { NgcCookieConsentModule, NgcCookieConsentConfig } from 'ngx-cookieconsent';
 
 // Components
@@ -17,6 +19,7 @@ import { FooterComponent } from 'src/app/components/frontend/footer/footer.compo
 import { WallpapersModule } from './wallpapers/wallpapers.module';
 import { ContactModule } from './contact/contact.module';
 import { StoryModule } from './story/story.module';
+import { InstagramCarouselComponent } from 'src/app/components/frontend/instagram-carousel/instagram-carousel.component';
 
 // Services
 
@@ -53,11 +56,14 @@ const cookieConfig: NgcCookieConsentConfig = {
     ContactModule,
     WallpapersModule,
     StoryModule,
+    NgImageSliderModule,
+    NgxUsefulSwiperModule
   ],
   declarations: [
     FrontendComponent,
     MenuComponent,
     FooterComponent,
+    InstagramCarouselComponent,
   ],
   providers: []
 })

@@ -36,7 +36,8 @@
               "src/app/@theme/styles/styles.scss",
               "node_modules/cookieconsent/build/cookieconsent.min.css",
               "node_modules/owl.carousel/dist/assets/owl.carousel.css",
-              "node_modules/owl.carousel/dist/assets/owl.theme.default.css"
+              "node_modules/owl.carousel/dist/assets/owl.theme.default.css",
+              "node_modules/swiper/dist/css/swiper.css"
             ],
             "scripts": [
               "node_modules/cookieconsent/build/cookieconsent.min.js",
