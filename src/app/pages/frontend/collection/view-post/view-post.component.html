@@ -13,7 +13,7 @@
         <p>{{post.description}}</p>
     </div>
     <div>
-        <img *ngFor="let sub_picture of post.sub_pictures" src="../../../../../assets/frontend/img/nathan/POGTADOR 1b.png" class="card-img-top"
+        <img *ngFor="let sub_picture of post.sub_pictures" src="{{baseUrl}}/img/{{sub_picture}}" class="card-img-top"
             alt="...">
     </div> 
 </div>
