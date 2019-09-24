@@ -1,4 +1,4 @@
-<div id="view_post">
+<div *ngIf="post" id="view_post">
     <div id="big-logo">
     </div>
     <div id="collection-title">
@@ -6,7 +6,7 @@
     </div>
     <div id="horizontal-line"></div>
     <div id="image_view_post">
-        <img src="../../../../../assets/frontend/img/nathan/POGTADOR 1b.png" class="card-img-top" alt="...">
+        <img src="{{baseUrl}}/img/{{post.picture}}" class="card-img-top" alt="...">
     </div>
     <div id="description_view_post">
         <p>{{post.title}}</p>
@@ -15,5 +15,5 @@
     <div>
         <img *ngFor="let sub_picture of post.sub_pictures" src="../../../../../assets/frontend/img/nathan/POGTADOR 1b.png" class="card-img-top"
             alt="...">
-    </div>
+    </div> 
 </div>
