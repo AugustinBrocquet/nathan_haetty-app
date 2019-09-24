@@ -1,13 +1,13 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { InstagramService } from 'src/app/shared/services/instagram/instagram.service';
-
+import { NgImageSliderComponent } from 'ng-image-slider';
 @Component({
   selector: 'app-instagram-carousel',
   templateUrl: './instagram-carousel.component.html',
   styleUrls: ['./instagram-carousel.component.scss']
 })
 export class InstagramCarouselComponent implements OnInit, AfterViewInit {
-
+  @ViewChild('nav', { static: false }) slider: NgImageSliderComponent;
   public images: Array<object> = [];
 
   constructor(private readonly instagramService: InstagramService) { }
@@ -30,6 +30,8 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
 
   goToInstagramPost(event: any) {
     console.log(event);
+    
+    console.log(this.slider);
   }
 
   ngAfterViewInit() {
