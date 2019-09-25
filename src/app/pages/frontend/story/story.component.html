@@ -1,27 +1,18 @@
 <section class="d-flex align-items-center">
-    <div id="story">
-      <div id="big-logo">
+  <div id="story">
+    <div id="big-logo">
+    </div>
+    <div id="story-text">
+      <div id="story-top" [innerHTML]="story.p0">
       </div>
-      <div id="story-text">
-        <div id="story-top">
-          <p>
-            {{ story.p0 }}
-          </p>
-        </div>
-        <br>
-        <br>
-        <div id="story-middle">
-          <p style="font-size: 18px; display:inline-block">
-            <b>{{ story.p1 }}</b>
-          </p>
-        </div>
-        <br>
-        <br>
-        <div id="story-bottom">
-          <p>
-            {{ story.p2 }}
-          </p>
-        </div>
+      <br>
+      <br>
+      <div id="story-middle" [innerHTML]="story.p1" style="font-size: 18px; display:inline-block; font-weight: bold">
+      </div>
+      <br>
+      <br>
+      <div id="story-bottom" [innerHTML]="story.p2">
       </div>
     </div>
-  </section>
+  </div>
+</section>

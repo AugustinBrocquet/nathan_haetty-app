@@ -20,20 +20,24 @@ export class MessagesService {
     return this.http.get(`${environment.url_api}/api/messages/${messageId}`, { headers });
   }
 
-  createMessage(message: Message) {
+  createMessage(message: any) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
 
-     /* const formData = new FormData();
-    formData.append('title', post.title);
-    formData.append('description', post.description);
-    formData.append('picture', post.picture);
+    const formData = new FormData();
+    formData.append('fullname', message.fullname);
+    formData.append('email', message.email);
+    formData.append('phone', message.phone);
 
-    for (const file of post.sub_pictures) {
-      formData.append('sub_pictures', file); 
+    for (const file of message.pictures) {
+      formData.append('pictures', file);
     }
-    */
 
-    // return this.http.post(`${environment.url_api}/api/messages`, formData, { headers });
+    for (const file of message.videos) {
+      formData.append('videos', file);
+    }
+
+
+    return this.http.post(`${environment.url_api}/api/messages`, formData, { headers });
 
   }
 

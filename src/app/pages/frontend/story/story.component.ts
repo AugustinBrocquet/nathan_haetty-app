@@ -1,13 +1,13 @@
 import { Story } from './../../../shared/interfaces/story.interface';
 import { StoryService } from './../../../shared/services/story/story.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-story',
   templateUrl: './story.component.html',
   styleUrls: ['./story.component.scss']
 })
-export class StoryComponent implements OnInit {
+export class StoryComponent implements OnInit, AfterViewInit {
 
   public story = {} as Story;
 
@@ -18,6 +18,10 @@ export class StoryComponent implements OnInit {
       this.story = data;
       console.log(data);
     });
+  }
+
+  ngAfterViewInit() {
+    document.getElementById('nb-global-spinner').style.display = 'none';
   }
 
 }
