@@ -4,7 +4,7 @@ import { VideosListComponent } from './videos-list.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
-
+import { EmbedVideo } from 'ngx-embed-video';
 
 @NgModule({
   declarations: [VideosListComponent],
@@ -13,6 +13,8 @@ import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
     FormsModule,
     RouterModule,
     NgxYoutubePlayerModule,
-  ]
+    EmbedVideo,
+  ],
+  providers: []
 })
 export class VideosListModule { }

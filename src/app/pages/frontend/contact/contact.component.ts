@@ -73,6 +73,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
     this.message.phone = this.contactForm.get('phone');
     this.message.content = this.contactForm.get('content');
 
+    this.messageService.createMessage(this.message).subscribe((response) => {
+      console.log(response);
+      alert('Message Envoyé !');
+    });
+
     console.log(this.message);
 
   }
