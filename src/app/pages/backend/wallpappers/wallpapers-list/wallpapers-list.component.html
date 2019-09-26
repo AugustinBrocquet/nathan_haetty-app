@@ -4,8 +4,3 @@
   <img *ngFor="let image_path of images" src="{{image_path}}" alt="Trulli" width="250" height="200">
 </div> -->
 
-<owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-  <div class="item" *ngFor="let image of images">
-      <img class="slide-image" src="{{image.standard_resolution.url}}" >
-  </div>
-</owl-carousel>

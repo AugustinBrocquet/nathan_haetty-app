@@ -9,19 +9,19 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true
   },
   {
-    title: 'Contact',
+    title: 'Messages',
     icon: 'shopping-cart-outline',
     link: '/admin/messages',
-  },
-  {
-    title: 'Wallpapers',
-    icon: 'shopping-cart-outline',
-    link: '/admin/wallpapers',
   },
   {
     title: 'Posts',
     icon: 'shopping-cart-outline',
     link: '/admin/posts',
+  },
+  {
+    title: 'Vidéos',
+    icon: 'shopping-cart-outline',
+    link: '/admin/videos',
   },
   {
     title: 'Histoire',
