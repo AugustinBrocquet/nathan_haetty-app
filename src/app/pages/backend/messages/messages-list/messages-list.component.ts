@@ -58,7 +58,7 @@ export class MessagesListComponent implements OnInit {
   goToViewMessage(event): void {
     console.log(event);
     console.log(`message/${event.data.messageId}`);
-    // this.router.navigate([`/admin/user/${event.data.userId}`]);
+    this.router.navigate([`/admin/message/${event.data.messageId}`]);
   }
 
   onDeleteConfirm(event): void {

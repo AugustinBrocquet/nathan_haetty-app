@@ -31,7 +31,7 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
 
   goToInstagramPost(event: any) {
     console.log(event);
-    
+
     // console.log(this.slider);
   }
 

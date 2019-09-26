@@ -13,6 +13,7 @@ import { WallpapersListModule } from './wallpappers/wallpapers-list/wallpapers-l
 import { CommonModule } from '@angular/common';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
 import { StoryModule } from './story/story.module';
+import { ViewMessageModule } from './messages/view-message/view-message.module';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { StoryModule } from './story/story.module';
     WallpapersListModule,
     VideosListModule,
     StoryModule,
+    ViewMessageModule,
     ViewUserModule,
     NbCardModule,
     NbTreeGridModule,

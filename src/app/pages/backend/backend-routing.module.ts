@@ -1,3 +1,4 @@
+import { ViewMessageComponent } from './messages/view-message/view-message.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
@@ -29,6 +30,10 @@ const routes: Routes = [{
     {
       path: 'messages',
       component: MessagesListComponent,
+    },
+    {
+      path: 'message/:messageId',
+      component: ViewMessageComponent,
     },
     {
       path: 'wallpapers',

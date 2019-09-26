@@ -22,8 +22,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   constructor(private readonly messageService: MessagesService) {
     this.contactForm = this.createFormGroupContact();
     this.message.pictures = [];
-    this.message.videos = [];
-   }
+  }
 
   ngOnInit() {
   }
@@ -43,7 +42,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
     }
     console.log(this.message);
   }
-  
+
 
   onVideosChange(event: any) {
     this.message.videos = [];
@@ -60,11 +59,11 @@ export class ContactComponent implements OnInit, AfterViewInit {
   createFormGroupContact() {
     return new FormGroup({
       fullname: new FormControl('', []),
-      email:new FormControl('', []),
+      email: new FormControl('', []),
       phone: new FormControl('', []),
       content: new FormControl('', []),
       pictures: new FormControl('', []),
-      videos: new FormControl('', []),
+      // videos: new FormControl('', []),
     });
   }
 
