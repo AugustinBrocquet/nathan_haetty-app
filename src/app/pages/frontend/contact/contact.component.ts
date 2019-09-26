@@ -44,7 +44,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
   }
 
 
-  onVideosChange(event: any) {
+  /* onVideosChange(event: any) {
     this.message.videos = [];
 
     if (event.target.files.length > 0) {
@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
     }
     console.log(this.message);
-  }
+  } */
 
   createFormGroupContact() {
     return new FormGroup({
@@ -76,6 +76,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
     this.messageService.createMessage(this.message).subscribe((response) => {
       console.log(response);
       alert('Message Envoyé !');
+      this.contactForm.reset();
     });
 
     console.log(this.message);
@@ -84,12 +85,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     document.getElementById('nb-global-spinner').style.display = 'none';
-  }
-
-  sendMessage() {
-    this.messageService.createMessage(this.message);
-    // .subscribe((response) => {
-    // });
   }
 
 }

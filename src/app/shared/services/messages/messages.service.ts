@@ -27,14 +27,15 @@ export class MessagesService {
     formData.append('fullname', message.fullname);
     formData.append('email', message.email);
     formData.append('phone', message.phone);
+    formData.append('content', message.content);
 
     for (const file of message.pictures) {
       formData.append('pictures', file);
     }
 
-    for (const file of message.videos) {
+    /*for (const file of message.videos) {
       formData.append('videos', file);
-    }
+    } */
 
 
     return this.http.post(`${environment.url_api}/api/messages`, formData, { headers });
