@@ -82,7 +82,7 @@ body {
 
 @media (min-width: 768px) {
   #hero {
-    background-image: url("../assets/frontend/img/nathan/nathan_background.jpg");
+    background-image: url("../img/nathan/nathan_background.jpg");
   }
 }
 

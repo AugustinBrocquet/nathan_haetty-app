@@ -16,7 +16,7 @@ export const environment = {
       appId: '1:917965703973:web:a527c862d035fc47bca8cc',
     },
   },
-  url_api: 'https://875cce25.ngrok.io',
+  url_api: 'http://localhost:3000',
 };
 
 /*

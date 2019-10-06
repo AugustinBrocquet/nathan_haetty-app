@@ -52,7 +52,7 @@ const routes: Routes = [
     component: VideosListComponent,
   },
   {
-    path: 'test',
+    path: 'instagram',
     component: InstagramCarouselComponent,
   },
 ];

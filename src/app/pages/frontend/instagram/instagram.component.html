@@ -1,6 +1,22 @@
-<p>instagram works!</p>
-<owl-carousel [options]="carouselOptions" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-  <div class="item" *ngFor="let image of images">
-    <img class="slide-image" src="{{image.standard_resolution.url}}">
+<div id="wallpaper_global">
+  <div id="big-logo">
   </div>
-</owl-carousel>
+  <div id="collection-title">
+    <h1>Wallpapers</h1>
+  </div>
+  <div id="horizontal-line"></div>
+  <!-- Header -->
+
+  <!-- Photo Grid -->
+  <div class="container">
+
+    <div class="row">
+      <div *ngFor="let image of images" class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <ngx-image-zoom [thumbImage]=image.thumbnail.url [fullImage]=image.standard_resolution.url [magnification]="1"
+            [zoomMode]='hover'></ngx-image-zoom>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
