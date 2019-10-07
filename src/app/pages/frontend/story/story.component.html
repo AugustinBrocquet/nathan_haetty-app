@@ -1,18 +1,19 @@
 <section class="d-flex align-items-center">
-  <div id="story" style="background: url('assets/frontend/img/nathan/nathan_story_background.jpg')" >
-    <div id="big-logo">
+    <div id="story" style="background: url('assets/frontend/img/nathan/nathan_story_background.jpg')">
+        <div id="big-logo">
+        </div>
+        <div id="story-bg">
+            <div id="story-text">
+                <div id="story-top" [innerHTML]="story.p0">
+                </div>
+                <br>
+                <div id="story-middle" [innerHTML]="story.p1" style="font-size: 18px; display:inline-block; font-weight: bold">
+                </div>
+                <br>
+                <br>
+                <div id="story-bottom" [innerHTML]="story.p2">
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="story-text">
-      <div id="story-top" [innerHTML]="story.p0">
-      </div>
-      <br>
-      <br>
-      <div id="story-middle" [innerHTML]="story.p1" style="font-size: 18px; display:inline-block; font-weight: bold">
-      </div>
-      <br>
-      <br>
-      <div id="story-bottom" [innerHTML]="story.p2">
-      </div>
-    </div>
-  </div>
 </section>

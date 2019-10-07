@@ -1,18 +1,16 @@
-#view_post{
-    background-color:black;
+#view_post {
+    background-color: black;
     width: 100%;
     box-sizing: border-box;
 }
 
-#big-logo{
+#big-logo {}
 
-}
-
-#image_view_post{
-    width:800px !important;
-    height:600px !important;
-    margin-left:auto !important;
-    margin-right:auto !important;
+#image_view_post {
+    width: auto !important;
+    height: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 #horizontal-line {
@@ -23,17 +21,22 @@
     position: relative;
 }
 
-#description_view_post{
+#description_view_post {
     text-align: center;
-    color:white;
+    color: white;
 }
 
-html, body {
+html,
+body {
     height: 100%;
-  }
+}
 
-  swiper {
+swiper {
     height: 300px;
     width: 400px;
-  }
-  
+}
+
+.img-div image-popup {
+    width: 210px !important;
+    height: 105 px !important;
+}

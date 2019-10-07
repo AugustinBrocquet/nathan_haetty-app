@@ -1,47 +1,17 @@
 <div id="wallpaper_global">
-<div id="big-logo">
-</div>
-<div id="collection-title">
-  <h1>Wallpapers</h1>
-</div>
-<div id="horizontal-line"></div>
-<!-- Header -->
+    <div id="big-logo">
+    </div>
+    <div id="collection-title">
+        <h1>Wallpapers</h1>
+    </div>
+    <div id="horizontal-line"></div>
+    <!-- Header -->
 
-<!-- Photo Grid -->
-<div class="row" id="wallpaper_galerie">
-  <div class="column">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-  </div>
-  <div class="column">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-    <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-  </div>
-</div>
+    <!-- Photo Grid -->
+    <div class="row" id="wallpaper_galerie">
+        <div *ngFor="let wallpaper of wallpapers" class="col-sm-3">
+            <img src="{{baseUrl}}/img/{{wallpaper.path_image}}" style="width:100%">
+        </div>
+
+    </div>
 </div>
