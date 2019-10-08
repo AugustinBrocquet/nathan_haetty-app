@@ -36,7 +36,13 @@ const cookieConfig: NgcCookieConsentConfig = {
     }
   },
   theme: 'edgeless',
-  type: 'opt-out'
+  type: 'opt-out',
+  content: {
+    message: 'Ce site utilise des cookies pour vous garantir la meilleure expérience sur notre site.',
+    dismiss: 'Got it!',
+    deny: 'Refuser',
+    policy: 'Cookie Policy'
+  }
 };
 
 
