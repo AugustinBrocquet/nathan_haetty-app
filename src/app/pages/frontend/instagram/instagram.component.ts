@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { InstagramService } from 'src/app/shared/services/instagram/instagram.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-instagram',
@@ -7,7 +8,8 @@ import { InstagramService } from 'src/app/shared/services/instagram/instagram.se
   styleUrls: ['./instagram.component.scss']
 })
 export class InstagramComponent implements OnInit, AfterViewInit {
-
+  
+  public baseUrl = environment.url_api;
   public images: any[] = [
 
   ];
