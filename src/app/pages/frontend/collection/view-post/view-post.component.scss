@@ -4,8 +4,6 @@
     box-sizing: border-box;
 }
 
-#big-logo {}
-
 #image_view_post {
     width: auto !important;
     height: auto !important;
@@ -24,6 +22,10 @@
 #description_view_post {
     text-align: center;
     color: white;
+}
+
+#title{
+    font-size:20px;
 }
 
 html,
