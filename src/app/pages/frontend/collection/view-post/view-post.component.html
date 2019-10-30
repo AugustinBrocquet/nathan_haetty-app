@@ -13,8 +13,11 @@
         <p>{{post.description}}</p>
     </div>
     <div *ngIf="post.sub_pictures">
-        <ng-image-slider #nav [infinite]="true" [images]="images" #nav></ng-image-slider>
+            <ng-image-slider #nav [imagePopup]="false" [infinite]="true" [images]="images"
+                [imageSize]="{height: 130, width: 205}" [direction]="auto">
+            </ng-image-slider>
     </div>
+
 
 
 </div>
