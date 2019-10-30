@@ -2,9 +2,15 @@ body {
     background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
 }
 
+#contact-page{
+    background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;  
+    height:100vh;
+    margin:0;
+}
+
 .contact-form {
-    background: #fff;
-    background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;
+    // background: #fff;
+    // background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;
     background-size: 787.5px 453.73px;
     margin-top: 10%;
     margin-bottom: 5%;

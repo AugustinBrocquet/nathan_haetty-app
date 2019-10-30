@@ -1,40 +1,39 @@
-<div id="big-logo" onclick="location.href='/front/home'">
-</div>
-
-<div class="container contact-form">
-   <!-- <div class="contact-image">
-        <img src="assets/frontend/img/nathan/nathan_logo_white.png" alt="rocket_contact" />
-    </div> -->
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
-        <h3>Partagez nous votre projet</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <input type="text" formControlName="fullname" name="fullname" class="form-control" placeholder="Votre nom *" value="" />
+<div id="contact-page">
+    <div id="big-logo" onclick="location.href='/front/home'"></div>
+    <div class="container contact-form">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+            <h3>Partagez nous votre projet</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" formControlName="fullname" name="fullname" class="form-control"
+                            placeholder="Votre nom *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="email" name="email" class="form-control"
+                            placeholder="Adresse email *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" formControlName="phone" name="phone" class="form-control"
+                            placeholder="Numero de téléphoner *" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="file" formControlName="pictures" (change)="onPicturesChange($event)" multiple
+                            name="pictures" class="form-control" placeholder="Déposer des photos" value="" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" [disabled]="!contactForm.valid" name="btnSubmit" class="btnContact"
+                            value="Envoyer" />
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" formControlName="email" name="email" class="form-control" placeholder="Adresse email *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="text" formControlName="phone" name="phone" class="form-control" placeholder="Numero de téléphoner *" value="" />
-                </div>
-                <div class="form-group">
-                    <input type="file" formControlName="pictures" (change)="onPicturesChange($event)" multiple name="pictures" class="form-control" placeholder="Déposer des photos" value="" />
-                </div>
-                <!-- <div class="form-group">
-                        <input type="file"  formControlName="videos" (change)="onVideosChange($event)" multiple name="videos" class="form-control" placeholder="Déposer des videos"
-                            value="" />
-                </div>  -->
-                <div class="form-group">
-                    <input type="submit" [disabled]="!contactForm.valid" name="btnSubmit" class="btnContact" value="Envoyer" />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <textarea formControlName="content" name="content" class="form-control"
+                            placeholder="Votre message *" style="width: 100%; height: 150px;"></textarea>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <textarea formControlName="content" name="content" class="form-control" placeholder="Votre message *" style="width: 100%; height: 150px;"></textarea>
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
-<agm-map [latitude]="mapsConfig.lat" [zoom]="mapsConfig.zoom" [longitude]="mapsConfig.lng"></agm-map>
+<!-- <agm-map [latitude]="mapsConfig.lat" [zoom]="mapsConfig.zoom" [longitude]="mapsConfig.lng"></agm-map> -->

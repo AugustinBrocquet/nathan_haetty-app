@@ -349,6 +349,11 @@ ul {
   width: 400px;
 }
 
+app-contact{
+    background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;    
+}
+
+
 li a {
   display: block;
   color: #000;
