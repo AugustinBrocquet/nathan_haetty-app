@@ -1,8 +1,11 @@
 <div id="contact-page">
-    <div id="big-logo" onclick="location.href='/front/home'"></div>
+    <a [routerLink]="['/front/home']"  >
+      <div id="big-logo">
+      </div>
+    </a>
     <div class="container contact-form">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
-            <h3>Partagez nous votre projet</h3>
+            <h3>Contact</h3>
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
@@ -18,13 +21,17 @@
                             placeholder="Numero de téléphoner *" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="file" formControlName="pictures" (change)="onPicturesChange($event)" multiple
+                        <input class="file" type="file" formControlName="pictures" (change)="onPicturesChange($event)" multiple
                             name="pictures" class="form-control" placeholder="Déposer des photos" value="" />
                     </div>
                     <div class="form-group">
-                        <input type="submit" [disabled]="!contactForm.valid" name="btnSubmit" class="btnContact"
-                            value="Envoyer" />
-                    </div>
+                        <div class="input-group input-file">
+                          <span class="input-group-btn">
+                                <button class="btn btn-default btn-choose" type="button">Choisir</button>
+                            </span>
+                            <input formControlName="pictures" (change)="onPicturesChange($event)" multiple name="pictures" type="text" class="form-control" placeholder="Déposer des photos" />
+                        </div>
+                      </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -32,6 +39,10 @@
                             placeholder="Votre message *" style="width: 100%; height: 150px;"></textarea>
                     </div>
                 </div>
+            </div>
+            <div class="container text-center btn-m-t">
+                <input type="submit" [disabled]="!contactForm.valid" name="btnSubmit" class="btnContact"
+                    value="Envoyer" />
             </div>
         </form>
     </div>

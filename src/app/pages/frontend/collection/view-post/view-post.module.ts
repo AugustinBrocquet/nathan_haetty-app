@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NgImageSliderModule } from 'ng-image-slider';
 
 import { ViewPostComponent } from './view-post.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,7 +11,8 @@ import { ViewPostComponent } from './view-post.component';
   declarations: [ViewPostComponent],
   imports: [
     CommonModule,
-    NgImageSliderModule
+    NgImageSliderModule,
+    RouterModule
   ]
 })
 export class ViewPostModule { }

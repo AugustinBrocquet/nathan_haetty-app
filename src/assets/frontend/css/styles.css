@@ -51,6 +51,7 @@ body {
 }
 
 #story-top {
+  text-align: justify;
   height: auto;
   width: 60%;
   margin-top: 55px !important;
@@ -59,13 +60,16 @@ body {
 }
 
 #story-middle {
+  text-align: justify;
   height: auto;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 32px !important;
 }
 
 #story-bottom {
+  text-align: justify;
   height: auto;
   width: 60%;
   margin-left: auto;
@@ -350,7 +354,7 @@ ul {
 }
 
 app-contact{
-    background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;    
+    background: url('../../../../assets/frontend/img/nathan/bg-contact.jpg') no-repeat;
 }
 
 
@@ -381,4 +385,20 @@ li a:hover {
 
 iframe {
   width: 100% !important;
+}
+
+.img-hover-zoom {
+  height: 300px; /* Modify this according to your need */
+  overflow: hidden; /* Removing this will break the effects */
+}
+
+.img-hover-zoom--colorize img {
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
 }

@@ -1,27 +1,36 @@
 <section class="d-flex align-items-center" id="videos">
-
   <div id="collection-div">
-    <div id="big-logo" onclick="location.href='/front/home'">
-    </div>
+      <a [routerLink]="['/front/home']"  >
+        <div id="big-logo">
+        </div>
+      </a>
     <div id="collection-title">
       <h1>Collection de videos</h1>
     </div>
     <div id="horizontal-line"></div>
 
-    <div class="row">
-      <div class="col-6" *ngFor="let video of videos">
+    <div class="container text-center" style="width: 65%;">
+      <div class="row">
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">{{video.title}}</h5>
-            <!-- <iframe width="100%" height="300" [src]="video.path_youtube | safe"></iframe> -->
-            <youtube-player [videoId]="video.embed"></youtube-player>
-            <p class="card-text">{{video.description}}</p>
+            <h5 class="card-title"></h5>
+            <youtube-player [videoId]="'9J7-9GgC3LM'"></youtube-player>
+            <p class="card-text"></p>
           </div>
         </div>
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-6 animated pulse" *ngFor="let video of videos">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ video.title }}</h5>
+            <youtube-player [videoId]="video.embed"></youtube-player>
+            <p class="card-text">{{ video.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-
 </section>

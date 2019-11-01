@@ -1,6 +1,8 @@
 <div id="wallpaper_global">
-    <div id="big-logo" onclick="location.href='/front/home'">
-    </div>
+    <a [routerLink]="['/front/home']"  >
+      <div id="big-logo">
+      </div>
+    </a>
     <div id="collection-title">
         <h1>Wallpapers</h1>
     </div>
@@ -9,7 +11,7 @@
 
     <!-- Photo Grid -->
     <div class="row" id="wallpaper_galerie">
-        <div *ngFor="let wallpaper of wallpapers" class="col-sm-3">
+        <div *ngFor="let wallpaper of wallpapers" class="col-sm-3 animated pulse">
             <img src="{{baseUrl}}/img/{{wallpaper.path_image}}">
         </div>
 

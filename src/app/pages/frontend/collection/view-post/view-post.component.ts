@@ -30,7 +30,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
       });
 
       console.log(this.images);
-      console.log(data);
+
     });
   }
 

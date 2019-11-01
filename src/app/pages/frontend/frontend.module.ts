@@ -19,6 +19,7 @@ import { WallpapersModule } from './wallpapers/wallpapers.module';
 import { ContactModule } from './contact/contact.module';
 import { StoryModule } from './story/story.module';
 import { InstagramCarouselComponent } from 'src/app/components/frontend/instagram-carousel/instagram-carousel.component';
+import { RouterModule } from '@angular/router';
 
 // Services
 
@@ -62,6 +63,7 @@ const cookieConfig: NgcCookieConsentConfig = {
     WallpapersModule,
     StoryModule,
     NgImageSliderModule,
+    RouterModule,
   ],
   declarations: [
     FrontendComponent,

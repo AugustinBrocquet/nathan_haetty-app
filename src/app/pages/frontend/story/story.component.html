@@ -1,6 +1,9 @@
 <section class="d-flex align-items-center">
     <div id="story">
-        <div id="big-logo" onclick="location.href='/front/home'">
+        <a [routerLink]="['/front/home']"  >
+          <div id="big-logo">
+          </div>
+        </a>
         </div>
         <div id="story-bg">
             <div id="story-text">
@@ -15,5 +18,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </section>

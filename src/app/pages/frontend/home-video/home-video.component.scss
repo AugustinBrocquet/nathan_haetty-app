@@ -1,37 +1,57 @@
 :host {
-    * {
-        box-sizing: border-box;
-    }
-    body {
-        margin: 0;
-        font-family: Arial;
-        font-size: 17px;
-    }
-    #myVideo {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        min-width: 100%;
-        min-height: 100%;
-    }
-    #myBtn {
-        position: fixed;
-        bottom: 10%;
-        right: 45%;
-        width: 200px;
-        font-size: 18px;
-        padding: 10px;
-        border: none;
-        background-color: #11ffee00;
-        color: #fff;
-        margin-right: auto;
-        margin-left: auto;
-        cursor: pointer;
-        border-style: solid;
-        border-block-color: white;
-    }
-    #myBtn:hover {
-        background: #ddd;
-        color: black;
-    }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  #myVideo {
+    padding: 18rem 7rem 0rem 4rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #myBtn {
+    position: fixed;
+    bottom: 10%;
+    right: 45%;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #11ffee00;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    cursor: pointer;
+    border-style: solid;
+    border-block-color: white;
+  }
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
+  .video_contain {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+    width: 80%;
+  }
 }
