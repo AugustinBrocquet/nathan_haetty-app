@@ -16,7 +16,7 @@ export const environment = {
       appId: '1:917965703973:web:a527c862d035fc47bca8cc',
     },
   },
-  url_api: 'http://localhost:3000',
+  url_api: 'https://nathan-haetty-server.herokuapp.com',
 };
 
 /*
