@@ -1,16 +1,17 @@
 <section class="d-flex align-items-center">
     <div id="story">
-        <a [routerLink]="['/front/home']"  >
-          <div id="big-logo">
-          </div>
+        <a [routerLink]="['/front/home']">
+            <div id="big-logo">
+            </div>
         </a>
-        </div>
+
         <div id="story-bg">
             <div id="story-text">
                 <div id="story-top" [innerHTML]="story.p0">
                 </div>
                 <br>
-                <div id="story-middle" [innerHTML]="story.p1" style="font-size: 18px; display:inline-block; font-weight: bold">
+                <div id="story-middle" [innerHTML]="story.p1"
+                    style="font-size: 18px; display:inline-block; font-weight: bold">
                 </div>
                 <br>
                 <br>
@@ -18,4 +19,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>

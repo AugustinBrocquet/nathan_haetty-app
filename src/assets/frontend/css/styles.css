@@ -13,7 +13,6 @@ body {
 }
 
 #story {
-  width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
