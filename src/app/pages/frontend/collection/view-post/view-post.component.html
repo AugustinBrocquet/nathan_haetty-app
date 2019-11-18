@@ -1,31 +1,30 @@
 <div *ngIf="post" id="view_post">
-    <a [routerLink]="['/front/home']"  >
-      <div id="big-logo">
-      </div>
-    </a>
-    <div id="collection-title">
-        <h1>Collection</h1>
+  <a [routerLink]="['/front/home']">
+    <div id="big-logo">
     </div>
-    <div id="horizontal-line"></div>
-    <div id="image_view_post">
-        <img src="{{baseUrl}}/img/{{post.picture}}" class="card-img-top" alt="...">
-    </div>
-    <div id="description_view_post" class="container">
-      <div>
-        <p id="title">{{post.title}}</p>
-        <p *ngIf="post.title !== post.description">{{post.description}}</p>
+  </a>
+  <div id="collection-title">
+    <h1>Collection</h1>
+  </div>
+  <div id="horizontal-line"></div>
+  <div id="image_view_post" *ngIf="images.length == 1">
+    <img src="{{baseUrl}}/img/{{post.picture}}" class="card-img-top" style="width: 80%; padding: 1em;" alt="...">
+  </div>
+  <div *ngIf="images.length > 1" class="row" style="margin: 5em 2em 0 2em;" id="wallpaper_galerie">
+    <div *ngFor="let image of images" class="col-sm-6">
+      <div class="img-hover-zoom ">
+        <img src="{{image.thumbImage}}" style="width:80%">
+        <!--<ngx-image-zoom [thumbImage]=image.thumbnail.url [fullImage]=image.standard_resolution.url [magnification]="1" [zoomMode]="'hover'"></ngx-image-zoom>-->
       </div>
     </div>
 
-    <div *ngIf="images.length > 1" class="row" id="wallpaper_galerie">
-        <div *ngFor="let image of images" class="col-sm-3">
-            <div class="img-hover-zoom ">
-            <img src="{{image.thumbImage}}" style="width:100%">
-            <!--<ngx-image-zoom [thumbImage]=image.thumbnail.url [fullImage]=image.standard_resolution.url [magnification]="1" [zoomMode]="'hover'"></ngx-image-zoom>-->
-            </div>
-          </div>
-
+  </div>
+  <div id="description_view_post" class="container">
+    <div>
+      <p id="title">{{post.title}}</p>
+      <p *ngIf="post.title !== post.description">{{post.description}}</p>
     </div>
+  </div>
 
 
 

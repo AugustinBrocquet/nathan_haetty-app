@@ -14,7 +14,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/admin/messages',
   },
   {
-    title: 'Posts',
+    title: 'Collection',
     icon: 'shopping-cart-outline',
     link: '/admin/posts',
   },
