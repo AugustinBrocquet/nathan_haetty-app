@@ -11,7 +11,8 @@
 
     <!-- Photo Grid -->
     <div class="row" id="wallpaper_galerie">
-        <div *ngFor="let wallpaper of wallpapers; let i=index" class="col-sm-3 animated pulse">
+
+        <div *ngFor="let wallpaper of wallpapers; let i=index" class="col-sm-4 animated pulse">
             <img src="{{baseUrl}}/img/{{wallpaper.path_image}}" (click)="open(i)">
         </div>
 
