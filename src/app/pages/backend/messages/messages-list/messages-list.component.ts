@@ -56,8 +56,8 @@ export class MessagesListComponent implements OnInit {
   constructor(private router: Router, private messagesService: MessagesService) { }
 
   goToViewMessage(event): void {
-    console.log(event);
-    console.log(`message/${event.data.messageId}`);
+    // console.log(event);
+    // console.log(`message/${event.data.messageId}`);
     this.router.navigate([`/admin/message/${event.data.messageId}`]);
   }
 
@@ -78,7 +78,7 @@ export class MessagesListComponent implements OnInit {
           ...elem
         };
       });
-      console.log(this.messages);
+     //  console.log(this.messages);
     });
   }
 

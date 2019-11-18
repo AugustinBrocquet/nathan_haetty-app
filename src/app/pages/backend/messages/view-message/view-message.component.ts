@@ -28,8 +28,8 @@ export class ViewMessageComponent implements OnInit {
         this.images.push(img);
       });
 
-      console.log(this.images);
-      console.log(data);
+      // console.log(this.images);
+      // console.log(data);
     });
   }
 

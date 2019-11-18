@@ -29,7 +29,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
         this.images.push(img);
       });
 
-      console.log(this.images);
+     // console.log(this.images);
 
     });
   }

@@ -57,13 +57,14 @@ export class VideosListComponent implements OnInit {
           ...elem
         };
       });
-      console.log(this.videos);
+      // console.log(this.videos);
     });
   }
 
   createVideo() {
     this.videosService.createVideo(this.video).subscribe((response) => {
-      console.log(response);
+     // console.log(response);
+     alert('Vidéo ajouté avec succès');
     });
   }
 
@@ -77,8 +78,8 @@ export class VideosListComponent implements OnInit {
   }
 
   goToViewVideo(event): void {
-    console.log(event);
-    console.log(`video/${event.data.videoId}`);
+   // console.log(event);
+   // console.log(`video/${event.data.videoId}`);
     // this.router.navigate([`/admin/user/${event.data.userId}`]);
   }
 

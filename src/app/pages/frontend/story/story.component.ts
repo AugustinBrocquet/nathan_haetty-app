@@ -16,7 +16,7 @@ export class StoryComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     this.storyService.getStory('5d78e9d887e629b8e15d159d').subscribe((data: any) => {
       this.story = data;
-      console.log(data);
+     // console.log(data);
     });
   }
 

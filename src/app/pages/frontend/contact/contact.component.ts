@@ -40,7 +40,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
       });
 
     }
-    console.log(this.message);
+   // console.log(this.message);
   }
 
 
@@ -74,12 +74,12 @@ export class ContactComponent implements OnInit, AfterViewInit {
     this.message.content = this.contactForm.get('content');
 
     this.messageService.createMessage(this.message).subscribe((response) => {
-      console.log(response);
+      // console.log(response);
       alert('Message Envoyé !');
       this.contactForm.reset();
     });
 
-    console.log(this.message);
+   // console.log(this.message);
 
   }
 

@@ -22,7 +22,7 @@ export class PostsListComponent implements OnInit, AfterViewInit {
           ...elem
         };
       });
-      console.log(this.posts);
+     // console.log(this.posts);
     });
   }
 

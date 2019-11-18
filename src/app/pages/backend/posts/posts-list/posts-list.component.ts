@@ -53,20 +53,21 @@ export class PostsListComponent implements OnInit {
           ...elem
         };
       });
-      console.log(this.posts);
+      // console.log(this.posts);
     });
   }
 
 
   createPost() {
     this.postsService.createPost(this.post).subscribe((response) => {
-      console.log(response);
+      // console.log(response);
+      alert('Collection crée ! ');
     });
   }
 
   pictureChange(event) {
     this.post.picture = event.target.files[0];
-    console.log(this.post);
+    // sconsole.log(this.post);
   }
 
   subPicturesChange(event) {
@@ -79,11 +80,11 @@ export class PostsListComponent implements OnInit {
       });
 
     }
-    console.log(this.post);
+    // console.log(this.post);
   }
 
   onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
+    if (window.confirm('Voulez vous vraiment procéder à la suppression ?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
@@ -91,8 +92,8 @@ export class PostsListComponent implements OnInit {
   }
 
   goToViewPost(event): void {
-    console.log(event);
-    console.log(`post/${event.data.postId}`);
+    // console.log(event);
+    // console.log(`post/${event.data.postId}`);
     // this.router.navigate([`/admin/user/${event.data.userId}`]);
   }
 

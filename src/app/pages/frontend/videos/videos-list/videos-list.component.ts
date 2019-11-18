@@ -36,7 +36,7 @@ export class VideosListComponent implements OnInit, AfterViewInit {
           ...elem
         };
       });
-      console.log(this.videos);
+    //  console.log(this.videos);
     });
   }
 

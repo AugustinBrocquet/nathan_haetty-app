@@ -21,19 +21,20 @@ export class StoryComponent implements OnInit {
   ngOnInit() {
     this.storyService.getStory('5d78e9d887e629b8e15d159d').subscribe((data: any) => {
       this.story = data;
-      console.log(data);
+      // console.log(data);
     });
   }
 
   updateStory() {
     this.storyService.updateStory(this.story).subscribe((response: any) => {
-      console.log(response);
+      // console.log(response);
+      alert('Story Modifiée avec succès');
     });
   }
 
   pictureChange(event) {
     this.story.image = event.target.files[0];
-    console.log(this.story);
+    // console.log(this.story);
   }
 
 }

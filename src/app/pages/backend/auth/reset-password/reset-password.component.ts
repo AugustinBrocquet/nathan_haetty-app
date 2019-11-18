@@ -32,7 +32,7 @@ export class ResetPasswordComponent extends NbResetPasswordComponent implements 
 
   ngOnInit() {
     this.usersService.checkTokenResetPassword(this.route.snapshot.paramMap.get('token')).subscribe((resp: any) => {
-      console.log(resp);
+      // console.log(resp);
     }, (error) => {
       this.router.navigate(['admin/auth/invalid-token']);
     });

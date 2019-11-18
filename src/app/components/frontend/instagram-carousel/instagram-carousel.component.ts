@@ -24,13 +24,13 @@ export class InstagramCarouselComponent implements OnInit, AfterViewInit {
         this.images.push(img);
       });
 
-      console.log(this.images);
+      // console.log(this.images);
 
     });
   }
 
   goToInstagramPost(event: any) {
-    console.log(event);
+    // console.log(event);
 
     // console.log(this.slider);
   }

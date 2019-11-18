@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./instagram.component.scss']
 })
 export class InstagramComponent implements OnInit, AfterViewInit {
-  
+
   public baseUrl = environment.url_api;
   public images: any[] = [
 
@@ -23,7 +23,7 @@ export class InstagramComponent implements OnInit, AfterViewInit {
         this.images.push(item.images);
       });
 
-      console.log(this.images);
+      // console.log(this.images);
 
     });
   }
