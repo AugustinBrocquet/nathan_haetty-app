@@ -3,6 +3,7 @@ import { PostsService } from 'src/app/shared/services/posts/posts.service';
 import { ActivatedRoute } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { NgImageSliderComponent } from 'ng-image-slider';
+import { Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-view-post',
@@ -11,31 +12,38 @@ import { NgImageSliderComponent } from 'ng-image-slider';
 })
 export class ViewPostComponent implements OnInit, AfterViewInit {
   @ViewChild('nav', { static: false }) slider: NgImageSliderComponent;
-  public images: Array<object> = [];
+  public images: Array<string> = [];
 
 
   public post: any;
   public baseUrl = environment.url_api;
 
-  constructor(private readonly postsService: PostsService, private route: ActivatedRoute) { }
+  constructor(private lightbox: Lightbox, private readonly postsService: PostsService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.postsService.getPost(this.route.snapshot.paramMap.get('postId')).subscribe((data: any) => {
       this.post = data;
       this.post.sub_pictures.forEach(item => {
-        const img = {} as any;
-        img.image = item;
-        img.thumbImage = `${this.baseUrl}/img/${item}`;
-        this.images.push(img);
+        this.images.push(`${this.baseUrl}/img/${item}`);
       });
 
-     // console.log(this.images);
+      // console.log(this.images);
 
     });
   }
 
   ngAfterViewInit() {
     document.getElementById('nb-global-spinner').style.display = 'none';
+  }
+
+  open(index: number): void {
+    // open lightbox
+    this.lightbox.open(this.albums, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this.lightbox.close();
   }
 
 
