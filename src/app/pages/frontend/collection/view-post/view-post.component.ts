@@ -12,7 +12,7 @@ import { Lightbox } from 'ngx-lightbox';
 })
 export class ViewPostComponent implements OnInit, AfterViewInit {
   @ViewChild('nav', { static: false }) slider: NgImageSliderComponent;
-  public images: Array<string> = [];
+  public images: any = [];
 
 
   public post: any;
@@ -38,7 +38,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
 
   open(index: number): void {
     // open lightbox
-    this.lightbox.open(this.albums, index);
+    this.lightbox.open(this.images, index);
   }
 
   close(): void {
