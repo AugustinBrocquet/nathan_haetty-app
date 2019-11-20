@@ -11,7 +11,6 @@ import { Lightbox } from 'ngx-lightbox';
   styleUrls: ['./view-post.component.scss']
 })
 export class ViewPostComponent implements OnInit, AfterViewInit {
-  @ViewChild('nav', { static: false }) slider: NgImageSliderComponent;
   public images: any = [];
 
 
@@ -24,7 +23,11 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
     this.postsService.getPost(this.route.snapshot.paramMap.get('postId')).subscribe((data: any) => {
       this.post = data;
       this.post.sub_pictures.forEach(item => {
-        this.images.push(`${this.baseUrl}/img/${item}`);
+        this.images.push({
+          src: `${this.baseUrl}/img/${item}`,
+          caption: ``,
+          thumb: `${this.baseUrl}/img/${item}`
+        });
       });
 
       // console.log(this.images);
