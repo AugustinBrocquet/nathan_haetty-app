@@ -1,83 +1,102 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: Arial;
+    margin: 0;
+    font-family: Arial;
 }
 
 .col-sm-3 {
-  max-height: 175.64px;
+    max-height: 175.64px;
 }
 
 img {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  object-fit: contain
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+#big-logo {
+    background-image: url("../img/nathan/nathan_logo_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    height: 115px;
 }
 
 img:hover {
-  color: rgba(255, 255, 255, 0.4);
-  border: solid;
-  -ms-transform: scale(1.1);
-  /* IE 9 */
-  -webkit-transform: scale(1.1);
-  /* Safari 3-8 */
-  transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.4);
+    border: solid;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }
 
-
 .header {
-  text-align: center;
-  padding: 32px;
+    text-align: center;
+    padding: 32px;
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
 }
 
+
 /* Create four equal columns that sits next to each other */
+
 .column {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
 }
 
 .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
 }
+
 
 /* Responsive layout - makes a two column-layout instead of four columns */
+
 @media screen and (max-width: 800px) {
-  .column {
-    -ms-flex: 50%;
-    flex: 50%;
-    max-width: 50%;
-  }
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
-  .column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
-  }
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
 }
 
 #wallpaper_global {
-  background-color: black;
+    background-color: black;
 }
 
 #wallpaper_galerie {
-  margin-top: 5%;
+    margin-top: 5%;
 }

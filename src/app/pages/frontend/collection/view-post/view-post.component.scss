@@ -26,10 +26,10 @@
     width: 60%;
 }
 
-
-#title{
-    font-size:20px;
-    text-align: center;;
+#title {
+    font-size: 20px;
+    text-align: center;
+    ;
 }
 
 html,
@@ -45,4 +45,15 @@ swiper {
 .img-div image-popup {
     width: 210px !important;
     height: 105 px !important;
+}
+
+#big-logo {
+    background-image: url("../img/nathan/nathan_logo_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    height: 115px;
 }

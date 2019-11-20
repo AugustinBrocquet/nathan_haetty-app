@@ -13,8 +13,20 @@
     cursor: pointer;
     border-style: solid;
     border-block-color: white;
-  }
-  #myBtn:hover {
+}
+
+#myBtn:hover {
     background: #ddd;
     color: black;
-  }
+}
+
+#big-logo {
+    background-image: url("../img/nathan/nathan_logo_white.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 250px;
+    height: 115px;
+}
