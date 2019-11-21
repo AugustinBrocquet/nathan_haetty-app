@@ -1,22 +1,24 @@
 a {
-    color: #FFFFFF;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
 }
 
 .col-6 {
-    margin-bottom: 6%;
+  margin-bottom: 6%;
 }
 
 .card-text {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #big-logo {
-    background-image: url("../../../../../assets/frontend/img/nathan/nathan_logo_white.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    width: 250px;
-    height: 115px;
+  background-image: url("../../../../../assets/frontend/img/nathan/nathan_logo_white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  width: 250px;
+  height: 115px;
 }
