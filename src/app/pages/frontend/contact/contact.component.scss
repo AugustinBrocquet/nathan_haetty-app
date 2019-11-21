@@ -20,9 +20,10 @@ textarea {
 
 #contact-page {
     background: url('../../../../assets/frontend/img/nathan/nathan_contat_bg.jpg') no-repeat;
-    height: 100vh;
+    // height: 100vh;
     margin: 0;
     background-size: cover;
+    padding :25px !important;
 }
 
 .contact-form {

@@ -1,0 +1,28 @@
+#navcol-1 {
+  width: 400px !important;
+  height: 406px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid {
+  font-size: 13px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+#menu-ul {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 0px) {
+  .navbar-expand-sm {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
