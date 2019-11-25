@@ -7,7 +7,7 @@
     font-family: Arial;
     font-size: 17px;
   }
-  
+
   #myVideo {
     padding: 18rem 7rem 0rem 4rem;
     position: fixed;
@@ -18,36 +18,42 @@
   }
 
   @media (max-width: 640px) {
-    .video-background{
+    .video-background {
       background-image: url("../../../../assets/frontend/img/nathan/home-video-mobile.jpg");
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 45%;
     }
-    #video_iframe{
+    #video_iframe {
       display: none;
     }
   }
   #myBtn {
-    position: fixed;
-    bottom: 10%;
-    right: 45%;
+    // position: relative;
+    // top: 50%;
+    // left: 50%;
     width: 200px;
     font-size: 18px;
     padding: 10px;
     border: none;
     background-color: #11ffee00;
     color: #fff;
-    margin-right: auto;
-    margin-left: auto;
     cursor: pointer;
     border-style: solid;
-    border-block-color: white;
   }
   #myBtn:hover {
     background: #ddd;
     color: black;
   }
+  #buttonEnter {
+    position:absolute;
+    width:200px;
+    bottom:10%;
+    right:25%;
+    left:50%;
+    margin-left:-100px;
+  }
+  
   .video_contain {
     position: absolute;
     top: -50%;
