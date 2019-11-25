@@ -25,6 +25,18 @@
   pointer-events: none;
 }
 
+@media (max-width: 640px) {
+    .video-background{
+      background-image: url("../../../assets/frontend/img/nathan/home-page-mobile.jpg"); 
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #video_iframe{
+      display: none;
+    }
+  }
+
 #vidtop-content {
   top: 0;
   color: #fff;

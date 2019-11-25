@@ -16,6 +16,18 @@
     min-width: 100%;
     min-height: 100%;
   }
+
+  @media (max-width: 640px) {
+    .video-background{
+      background-image: url("../../../../assets/frontend/img/nathan/home-video-mobile.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    #video_iframe{
+      display: none;
+    }
+  }
   #myBtn {
     position: fixed;
     bottom: 10%;
