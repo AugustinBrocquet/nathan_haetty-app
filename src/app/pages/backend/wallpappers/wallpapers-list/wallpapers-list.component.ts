@@ -74,7 +74,7 @@ export class WallpapersListComponent implements OnInit {
   onDeleteConfirm(event): void {
     if (window.confirm("Voulez vous vraiment procéder à la suppression ?")) {
       event.confirm.resolve();
-      this.wallpapersService.deleteWallpaper(event.wallpapersId);
+      this.wallpapersService.deleteWallpaper(event.data.wallpapersId);
     } else {
       event.confirm.reject();
     }
