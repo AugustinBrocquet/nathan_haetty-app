@@ -1,6 +1,29 @@
-<p>wallpapers-list works!</p>
+<nb-card>
+  <nb-card-header>
+      Posts
+  </nb-card-header>
 
-<!-- <div>
-  <img *ngFor="let image_path of images" src="{{image_path}}" alt="Trulli" width="250" height="200">
-</div> -->
+  <nb-card-body>
+      <ng2-smart-table (userRowSelect)="goToViewWallpaper($event)" [settings]="settings" [source]="wallpapers" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+  </nb-card-body>
 
+  <hr />
+  <br />
+
+</nb-card>
+
+<form>
+  <div class="form-group">
+      <label for="titleWallpaper">Titre</label>
+      <input name="title" [(ngModel)]="wallpaper.title" type="email" class="form-control" id="titleWallpaper" aria-describedby="emailHelp" placeholder="Titre">
+  </div>
+  <div class="form-group">
+      <label for="pictureWallpaper">Photo</label>
+      <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper" placeholder="Photo">
+  </div>
+
+  <button type="button" (click)="createWallpaper()" class="btn btn-primary">Valider</button>
+</form>
+
+<br />

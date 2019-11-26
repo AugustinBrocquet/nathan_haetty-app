@@ -23,7 +23,12 @@ export class WallpapersService {
 
   createWallpaper(wallpaper: Wallpaper) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post(`${environment.url_api}/api/wallpapers$`, wallpaper, { headers });
+
+    const formData = new FormData();
+    formData.append('title', wallpaper.title);
+    formData.append('path_image', wallpaper.path_image);
+
+    return this.http.post(`${environment.url_api}/api/wallpapers$`, formData, { headers });
   }
 
   updateWallpaper(wallpaper: Wallpaper) {

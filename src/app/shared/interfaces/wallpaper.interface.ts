@@ -1,3 +1,4 @@
 export interface Wallpaper {
-    content: string;
+    title: string;
+    path_image: any;
 }

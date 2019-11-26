@@ -12,7 +12,8 @@ import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon';
 export class MessagesListComponent implements OnInit {
 
   settings = {
-    add: {
+    action: false,
+    /*add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
@@ -25,7 +26,7 @@ export class MessagesListComponent implements OnInit {
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
-    },
+    },*/
     columns: {
       messageId: {
         title: 'ID',
