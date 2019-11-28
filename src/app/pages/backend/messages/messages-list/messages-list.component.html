@@ -2,20 +2,11 @@
   <nb-card-header>
     Messages
   </nb-card-header>
-
   <nb-card-body>
     <ng2-smart-table (userRowSelect)="goToViewMessage($event)" [settings]="settings" [source]="messages"
       (deleteConfirm)="onDeleteConfirm($event)">
     </ng2-smart-table>
+    <ckeditor [config]="editorConfig" [editor]="Editor" required data="" name="text">
+    </ckeditor>
   </nb-card-body>
-
-  <hr />
-  <br />
-
-
-      <ckeditor [config]="editorConfig" [editor]="Editor" required data="" name="text">
-      </ckeditor>
-
-
-
 </nb-card>

@@ -9,6 +9,9 @@ import { VideosService } from "src/app/shared/services/videos/videos.service";
 })
 export class VideosListComponent implements OnInit {
   settings = {
+    actions:{
+      add: false
+    },
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',

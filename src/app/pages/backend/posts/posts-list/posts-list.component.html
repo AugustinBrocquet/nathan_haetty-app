@@ -31,10 +31,7 @@
         Posts
     </nb-card-header>
     <nb-card-body>
-        <ng2-smart-table (userRowSelect)="goToViewPost($event)" [settings]="settings" [source]="posts"
-            (deleteConfirm)="onDeleteConfirm($event)">
+        <ng2-smart-table [settings]="settings" [source]="posts" (deleteConfirm)="onDeleteConfirm($event)">
         </ng2-smart-table>
     </nb-card-body>
-    <hr />
-    <br />
 </nb-card>

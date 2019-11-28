@@ -12,7 +12,9 @@ import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon';
 export class MessagesListComponent implements OnInit {
 
   settings = {
-    action: false,
+    actions:{
+      add: false
+    },
     /*add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -47,10 +49,10 @@ export class MessagesListComponent implements OnInit {
     },
   };
 
-  public Editor = BalloonEditor;
-  public editorConfig = {
-    placeholder: 'Type the content here!',
-  };
+  // public Editor = BalloonEditor;
+  // public editorConfig = {
+  //   // placeholder: 'Type the content here!',
+  // };
 
   public messages: Message[] = [];
 
