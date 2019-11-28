@@ -19,8 +19,8 @@ export class PostsListComponent implements OnInit {
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
     },*/
-    add: false,
-    edit: false,
+    // add: false,
+    // edit: false,
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true
