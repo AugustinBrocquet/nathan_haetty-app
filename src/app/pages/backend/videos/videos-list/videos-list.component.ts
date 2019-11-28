@@ -70,7 +70,9 @@ export class VideosListComponent implements OnInit {
   onDeleteConfirm(event): void {
     if (window.confirm("Voulez vous vraiment procéder à la suppression ?")) {
       event.confirm.resolve();
-      this.videosService.deleteVideo(event.data.videoId);
+      this.videosService.deleteVideo(event.data.videoId).subscribe(() => {
+        alert('Suppression réussie !');
+      });
     } else {
       event.confirm.reject();
     }

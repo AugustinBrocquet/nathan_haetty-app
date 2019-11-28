@@ -84,7 +84,9 @@ export class PostsListComponent implements OnInit {
   onDeleteConfirm(event): void {
     if (window.confirm("Voulez vous vraiment procéder à la suppression ?")) {
       event.confirm.resolve();
-      this.postsService.deletePost(event.data.postId);
+      this.postsService.deletePost(event.data.postId).subscribe(() => {
+        alert('Suppression réussie !');
+      });
     } else {
       event.confirm.reject();
     }

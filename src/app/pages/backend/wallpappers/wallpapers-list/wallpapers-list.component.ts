@@ -1,14 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { WallpapersService } from 'src/app/shared/services/wallpapers/wallpapers.service';
-import { Wallpaper } from 'src/app/shared/interfaces/wallpaper.interface';
+import { Component, OnInit } from "@angular/core";
+import { WallpapersService } from "src/app/shared/services/wallpapers/wallpapers.service";
+import { Wallpaper } from "src/app/shared/interfaces/wallpaper.interface";
 
 @Component({
-  selector: 'app-wallpapers-list',
-  templateUrl: './wallpapers-list.component.html',
-  styleUrls: ['./wallpapers-list.component.scss']
+  selector: "app-wallpapers-list",
+  templateUrl: "./wallpapers-list.component.html",
+  styleUrls: ["./wallpapers-list.component.scss"]
 })
 export class WallpapersListComponent implements OnInit {
-
   settings = {
     /*add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -45,7 +44,7 @@ export class WallpapersListComponent implements OnInit {
   public wallpapers: any[] = [];
   public wallpaper = {} as Wallpaper;
 
-  constructor(private readonly wallpapersService: WallpapersService) { }
+  constructor(private readonly wallpapersService: WallpapersService) {}
 
   ngOnInit() {
     this.wallpapersService.getWallpapers().subscribe((data: any) => {
@@ -60,10 +59,12 @@ export class WallpapersListComponent implements OnInit {
   }
 
   createWallpaper() {
-    this.wallpapersService.createWallpaper(this.wallpaper).subscribe(response => {
-      // console.log(response);
-      alert("Wallpaper créé ! ");
-    });
+    this.wallpapersService
+      .createWallpaper(this.wallpaper)
+      .subscribe(response => {
+        // console.log(response);
+        alert("Wallpaper créé ! ");
+      });
   }
 
   pictureChange(event) {
@@ -74,13 +75,14 @@ export class WallpapersListComponent implements OnInit {
   onDeleteConfirm(event): void {
     if (window.confirm("Voulez vous vraiment procéder à la suppression ?")) {
       event.confirm.resolve();
-      this.wallpapersService.deleteWallpaper(event.data.wallpapersId);
+      this.wallpapersService
+        .deleteWallpaper(event.data.wallpapersId)
+        .subscribe(() => {
+          alert('Suppression réussie !');
+        });
     } else {
       event.confirm.reject();
     }
   }
-  goToViewWallpaper(event: any) {
-
-  }
-
+  goToViewWallpaper(event: any) {}
 }
