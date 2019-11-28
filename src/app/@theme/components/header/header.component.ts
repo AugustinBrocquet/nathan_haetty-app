@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'default';
 
-  userMenu = [{ name: 'profile', title: 'Profil' }, { name: 'logout', title: 'Se déconnecter' }];
+  userMenu = [{ name: 'logout', title: 'Se déconnecter' }];
 
   constructor(private sidebarService: NbSidebarService,
     private menuService: NbMenuService,
@@ -81,6 +81,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
         console.log(error);
       });
 
+  }
+
+  disconnect(){
+    this.authenticationService.signOut();
   }
 
   ngOnDestroy() {

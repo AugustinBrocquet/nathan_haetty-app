@@ -66,7 +66,6 @@ export class UsersListComponent implements OnInit {
 
   ngOnInit() {
     this.usersService.getUsers().subscribe((data: any) => {
-
       this.users = data.map((elem) => {
         return {
           userId: elem._id,

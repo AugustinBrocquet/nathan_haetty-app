@@ -15,7 +15,6 @@ export class UsersService {
   }
 
   checkTokenResetPassword(token: string) {
-   // console.log(token);
     return this.http.post(`${environment.url_api}/api/users/auth/check-request-password-token`, { token });
   }
 

@@ -72,7 +72,6 @@ export class PostsListComponent implements OnInit {
 
   subPicturesChange(event) {
     this.post.sub_pictures = [];
-
     if (event.target.files.length > 0) {
       Array.from(event.target.files).forEach(file => {
         this.post.sub_pictures.push(file);
