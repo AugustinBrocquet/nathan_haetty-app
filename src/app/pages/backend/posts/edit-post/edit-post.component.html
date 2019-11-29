@@ -3,11 +3,9 @@
     <h3>{{ post.title }}</h3>
   </div>
 
-  <div>
-    <p>
-      {{ post.description }}
-    </p>
-  </div>
+  <div [innerHtml]="post.description"></div>
+
+
   <img
     src="{{ baseUrl }}/img/{{ post.picture }}"
     class="card-img-top"
@@ -15,7 +13,7 @@
     alt="..."
   />
   <div class="row">
-    <img class="col-4" src="{{ image }}" style="width:80%"" />
+    <img class="col-4" src="{{ image }}" style="width:80%" />
   </div>
   <br />
 

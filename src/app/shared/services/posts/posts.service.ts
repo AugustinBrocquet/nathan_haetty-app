@@ -37,9 +37,18 @@ export class PostsService {
 
   }
 
-  updatePost(post: Post) {
+  updatePost(post: any) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post(`${environment.url_api}/api/posts/update`, post, { headers });
+
+    const data = {} as any;
+
+    data._id = post._id;
+    data.title = post.title,
+    data.description = post.description;
+
+    console.log(data)
+
+    return this.http.post(`${environment.url_api}/api/posts/update`, data, { headers });
   }
 
   deletePost(postId: string) {

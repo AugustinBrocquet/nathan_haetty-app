@@ -41,7 +41,7 @@ export class EditPostComponent implements OnInit {
   }
 
   updatePost() {
-    this.postsService.createPost(this.post).subscribe(response => {
+    this.postsService.updatePost(this.post).subscribe(response => {
       alert("Collection modifée ! ");
     });
   }
