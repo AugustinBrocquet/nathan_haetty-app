@@ -1,7 +1,7 @@
 import { PostsService } from "./../../../../shared/services/posts/posts.service";
 import { Component, OnInit } from "@angular/core";
 import { Post } from "src/app/shared/interfaces/post.interface";
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-posts-list",
@@ -10,7 +10,7 @@ import { Post } from "src/app/shared/interfaces/post.interface";
 })
 export class PostsListComponent implements OnInit {
   settings = {
-    actions:{
+    actions: {
       add: false
     },
     delete: {
@@ -36,7 +36,10 @@ export class PostsListComponent implements OnInit {
   public posts: any[] = [];
   public post = {} as Post;
 
-  constructor(private readonly postsService: PostsService) { }
+  constructor(
+    private readonly postsService: PostsService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.postsService.getPosts().subscribe((data: any) => {
@@ -68,10 +71,14 @@ export class PostsListComponent implements OnInit {
     if (window.confirm("Voulez vous vraiment procéder à la suppression ?")) {
       event.confirm.resolve();
       this.postsService.deletePost(event.data.postId).subscribe(() => {
-        alert('Suppression réussie !');
+        alert("Suppression réussie !");
       });
     } else {
       event.confirm.reject();
     }
+  }
+
+  goToEdit(event) {
+    this.router.navigateByUrl(`admin/post/${event.data.postId}`);
   }
 }

@@ -11,6 +11,7 @@ import { WallpapersListComponent } from './wallpappers/wallpapers-list/wallpaper
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { VideosListComponent } from './videos/videos-list/videos-list.component';
 import { StoryComponent } from './story/story.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 
 const routes: Routes = [{
@@ -42,6 +43,10 @@ const routes: Routes = [{
     {
       path: 'posts',
       component: PostsListComponent,
+    },
+    {
+      path: 'post/:postId',
+      component: EditPostComponent,
     },
     {
       path: 'videos',

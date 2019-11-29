@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { VideosListModule } from './videos/videos-list/videos-list.module';
 import { StoryModule } from './story/story.module';
 import { ViewMessageModule } from './messages/view-message/view-message.module';
+import { EditPostModule } from './posts/edit-post/edit-post.module';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ViewMessageModule } from './messages/view-message/view-message.module';
     UsersListModule,
     MessagesListModule,
     PostsListModule,
+    EditPostModule,
     WallpapersListModule,
     VideosListModule,
     StoryModule,
