@@ -10,7 +10,9 @@ import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon';
   styleUrls: ['./messages-list.component.scss']
 })
 export class MessagesListComponent implements OnInit {
-
+  public Editor = BalloonEditor;
+  public editorConfig = {
+  };
   settings = {
     actions:{
       add: false

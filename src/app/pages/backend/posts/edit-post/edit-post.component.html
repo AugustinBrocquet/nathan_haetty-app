@@ -6,15 +6,20 @@
   <div [innerHtml]="post.description"></div>
 
 
-  <img
-    src="{{ baseUrl }}/img/{{ post.picture }}"
-    class="card-img-top"
-    style="width: 65%; padding: 1em;"
-    alt="..."
-  />
-  <div class="row">
-    <img class="col-4" src="{{ image }}" style="width:80%" />
+  <img src="{{ baseUrl }}/img/{{ post.picture }}" class="card-img-top" style="width: 65%; padding: 1em;" alt="..." />
+  <hr />
+
+  <div class="container">
+    <div class="row">
+      <div class="col-2" *ngFor="let sub_image of images">
+        <img (click)="confirmDeleteSubPicrture(sub_image)" src="{{ baseUrl }}/img/{{ sub_image }}" class="card-img-top" style="padding: 1em;"
+          alt="..." />
+      </div>
+    </div>
   </div>
+  <!-- <div class="row">
+    <img class="col-4" src="{{ image }}" style="width:80%" />
+  </div> -->
   <br />
 
   <h1>Modification</h1>
@@ -22,53 +27,26 @@
     <br />
     <div class="form-group">
       <label for="titleWallpaper">Titre</label>
-      <input
-        name="title"
-        [(ngModel)]="post.title"
-        type="email"
-        class="form-control"
-        id="titleWallpaper"
-        aria-describedby="emailHelp"
-        placeholder="Titre"
-      />
+      <input name="title" [(ngModel)]="post.title" type="email" class="form-control" id="titleWallpaper"
+        aria-describedby="emailHelp" placeholder="Titre" />
     </div>
     <div class="form-group">
-        <ckeditor
-        id="descriptionWallpaper"
-        [config]="editorConfig"
-        [editor]="Editor"
-        required
-        [data]="post.description"
-        name="text"
-        [(ngModel)]="post.description"
-      >
+      <ckeditor id="descriptionWallpaper" [config]="editorConfig" [editor]="Editor" required [data]="post.description"
+        name="text" [(ngModel)]="post.description">
       </ckeditor>
     </div>
     <div class="form-group">
       <label for="pictureWallpaper">Photo Principale</label>
-      <input
-        name="picture"
-        (change)="pictureChange($event)"
-        type="file"
-        class="form-control"
-        id="pictureWallpaper"
-        placeholder="Photo principale"
-      />
+      <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper"
+        placeholder="Photo principale" />
     </div>
     <div class="form-group">
       <label for="sub_picturesWallpaper">Photos complémentaires</label>
-      <input
-        name="sub_pictures"
-        (change)="subPicturesChange($event)"
-        multiple
-        type="file"
-        class="form-control"
-        id="sub_picturesWallpaper"
-        placeholder="Photos complémentaires"
-      />
+      <input name="sub_pictures" (change)="subPicturesChange($event)" multiple type="file" class="form-control"
+        id="sub_picturesWallpaper" placeholder="Photos complémentaires" />
     </div>
     <button type="button" (click)="updatePost()" class="btn btn-primary">
-      Ajouter
+      Enregistrer
     </button>
   </form>
   <br />
