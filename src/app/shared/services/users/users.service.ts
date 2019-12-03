@@ -18,8 +18,9 @@ export class UsersService {
     return this.http.post(`${environment.url_api}/api/users/auth/check-request-password-token`, { token });
   }
 
-  // createUser(){
-  //   return this.http.post(`${environement.url_api}/api/users/create/users`);
-  // }
+  createUser() {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
+    return this.http.post(`${environment.url_api}/api/users/create/users`, { headers });
+  }
 
 }
