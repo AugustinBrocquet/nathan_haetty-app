@@ -28,10 +28,8 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
           caption: ``,
           thumb: `${this.baseUrl}/img/${item}`
         });
+        console.log(this.images)
       });
-
-      // console.log(this.images);
-
     });
   }
 
@@ -48,7 +46,4 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
     // close lightbox programmatically
     this.lightbox.close();
   }
-
-
-
 }

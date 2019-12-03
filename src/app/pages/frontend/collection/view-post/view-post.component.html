@@ -12,8 +12,8 @@
   </div>
   <div *ngIf="images.length > 1" class="row" style="margin: 5em 2em 0 2em;" id="wallpaper_galerie">
     <div *ngFor="let image of images; let i=index" class="col-sm-6">
-      <div class="img-hover-zoom ">
-        <img src="{{image}}" style="width:80%" (click)="open(i)">
+      <div class="img-hover-zoom">
+        <img src="{{image.src}}" (click)="open(i)">
         <!--<ngx-image-zoom [thumbImage]=image.thumbnail.url [fullImage]=image.standard_resolution.url [magnification]="1" [zoomMode]="'hover'"></ngx-image-zoom>-->
       </div>
     </div>

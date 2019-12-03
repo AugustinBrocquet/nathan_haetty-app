@@ -40,7 +40,11 @@ export class UsersListComponent implements OnInit {
       email: {
         title: 'E-mail',
         type: 'string',
-      }
+      },
+      password: {
+        title: 'Password',
+        type: 'string',
+      },
     },
   };
 
@@ -51,8 +55,6 @@ export class UsersListComponent implements OnInit {
   }
 
   goToViewUser(event): void {
-    // console.log(event);
-    // console.log(`user/${event.data.userId}`);
     this.router.navigate([`/admin/user/${event.data.userId}`]);
   }
 
@@ -72,7 +74,6 @@ export class UsersListComponent implements OnInit {
           ...elem
         };
       });
-      // console.log(this.users);
     });
   }
 
