@@ -9,7 +9,9 @@ import { Message } from 'src/app/shared/interfaces/message';
   styleUrls: ['./messages-list.component.scss']
 })
 export class MessagesListComponent implements OnInit {
-
+  public Editor = BalloonEditor;
+  public editorConfig = {
+  };
   settings = {
     actions: {
       add: false

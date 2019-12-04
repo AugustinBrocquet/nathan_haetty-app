@@ -40,20 +40,29 @@ export class PostsService {
   updatePost(post: any) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
 
-    const data = {} as any;
 
-    data._id = post._id;
-    data.title = post.title,
-    data.description = post.description;
+    const formData = new FormData();
+    formData.append('postId', post._id);
+    formData.append('title', post.title);
+    formData.append('description', post.description);
+    formData.append('picture', post.picture);
 
-    console.log(data)
+    for (const file of post.sub_pictures) {
+      formData.append('sub_pictures', file);
+    }
 
-    return this.http.post(`${environment.url_api}/api/posts/update`, data, { headers });
+    return this.http.put(`${environment.url_api}/api/posts/update`, formData, { headers });
   }
 
   deletePost(postId: string) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
     return this.http.delete(`${environment.url_api}/api/posts/delete/${postId}`, { headers });
+  }
+
+  deleteSubPicture(postId, filename) {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
+    return this.http.put(`${environment.url_api}/api/posts/delete-subpicture`, {postId, filename}, { headers });
+
   }
 
 

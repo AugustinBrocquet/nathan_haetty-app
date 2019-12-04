@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { PostsService } from 'src/app/shared/services/posts/posts.service';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
@@ -10,34 +10,40 @@ import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon';
   styleUrls: ['./edit-post.component.scss']
 })
 export class EditPostComponent implements OnInit {
-
   public images: any = [];
   public post = {} as any;
   public baseUrl = environment.url_api;
-   public Editor = BalloonEditor;
-   public editorConfig = {
-   };
+  public Editor = BalloonEditor;
+  public editorConfig = {
+  };
+  private isLongPressed = false;
+
   constructor(
     private postsService: PostsService,
     private route: ActivatedRoute,
-    ) { }
+  ) { }
 
   ngOnInit() {
 
     this.postsService.getPost(this.route.snapshot.paramMap.get('postId')).subscribe((data: any) => {
       this.post = data;
       this.post.sub_pictures.forEach(item => {
-        this.images.push({
-          src: `${this.baseUrl}/img/${item}`,
-          caption: ``,
-          thumb: `${this.baseUrl}/img/${item}`
-        });
+        this.images.push(item);
       });
-
-      // console.log(this.images);
 
     });
 
+  }
+
+  confirmDeleteSubPicrture(filename){
+    if (window.confirm()) {
+      this.postsService.deleteSubPicture(this.post._id, filename).subscribe((response) => {
+        this.images = this.images.filter((elem) => {
+          return elem !== filename;
+        });
+        alert('photo supprimée');
+      });
+    }
   }
 
   updatePost() {
