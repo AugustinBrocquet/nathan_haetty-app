@@ -4,7 +4,7 @@
     </nb-card-header>
   
     <nb-card-body>
-      <ng2-smart-table (userRowSelect)="goToViewUser($event)" [settings]="settings" [source]="users" (deleteConfirm)="onDeleteConfirm($event)">
+      <ng2-smart-table (userRowSelect)="goToViewUser($event)" [settings]="settings" [source]="users" (createConfirm)="onCreateConfirm($event)" (deleteConfirm)="onDeleteConfirm($event)">
       </ng2-smart-table>
     </nb-card-body>
   </nb-card>

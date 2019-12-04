@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/shared/services/users/users.service';
+import { InvalidTokenComponent } from '../../auth/reset-password/invalid-token/invalid-token.component';
 
 @Component({
   selector: 'app-users-list',
@@ -11,6 +12,7 @@ export class UsersListComponent implements OnInit {
 
   settings = {
     add: {
+      confirmCreate: true,
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
@@ -66,6 +68,24 @@ export class UsersListComponent implements OnInit {
     }
   }
 
+  onCreateConfirm(event) {
+    if (window.confirm('Are you sure you want to create this user ?')) {
+      const user = {
+        username: event.newData.username,
+        firstname: event.newData.firstname,
+        lastname: event.newData.lastname,
+        email: event.newData.email,
+        password: event.newData.password
+      }
+      this.usersService.createUser(user).subscribe((response) => {
+        console.log(response)
+      })
+      event.confirm.resolve(user)
+    } else {
+      event.confirm.reject();
+    }
+  }
+
   ngOnInit() {
     this.usersService.getUsers().subscribe((data: any) => {
       this.users = data.map((elem) => {
@@ -76,5 +96,4 @@ export class UsersListComponent implements OnInit {
       });
     });
   }
-
 }
