@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { MessagesService } from 'src/app/shared/services/messages/messages.service';
 import { Router } from '@angular/router';
 import { Message } from 'src/app/shared/interfaces/message';
-
+import { BalloonEditor } from '@ckeditor/ckeditor5-build-balloon';
 @Component({
   selector: 'app-messages-list',
   templateUrl: './messages-list.component.html',
   styleUrls: ['./messages-list.component.scss']
 })
 export class MessagesListComponent implements OnInit {
-//  public Editor = BalloonEditor;
+  public Editor = BalloonEditor;
   public editorConfig = {
   };
   settings = {
