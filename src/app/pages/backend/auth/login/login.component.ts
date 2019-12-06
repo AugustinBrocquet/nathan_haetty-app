@@ -43,6 +43,7 @@ export class LoginComponent extends NbLoginComponent implements OnInit {
       this.router.navigate(['/admin/users']);
      //  console.log('redirection');
     }, (error) => {
+      alert('Une erreur est survenue !');
       console.log(error);
     });
   }
