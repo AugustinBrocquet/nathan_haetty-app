@@ -23,4 +23,18 @@ export class UsersService {
     return this.http.post(`${environment.url_api}/api/users/create/users`, user, { headers });
   }
 
+  sendRequestPassword(email: string) {
+    return this.http.post(`${environment.url_api}/api/users/auth/request-password`, { email: email });
+  }
+
+  resetPassword(token: string, password: string, confirmPassword: string) {
+    return this.http.post(`${environment.url_api}/api/users/auth/reset-password`,
+      {
+        token,
+        password,
+        confirm_password: confirmPassword
+      }
+    );
+  }
+
 }
