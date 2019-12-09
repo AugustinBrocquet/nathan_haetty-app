@@ -11,6 +11,9 @@ import { InvalidTokenComponent } from '../../auth/reset-password/invalid-token/i
 export class UsersListComponent implements OnInit {
 
   settings = {
+    actions: {
+      edit: false
+    },
     add: {
       confirmCreate: true,
       addButtonContent: '<i class="nb-plus"></i>',
