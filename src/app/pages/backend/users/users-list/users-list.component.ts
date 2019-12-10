@@ -64,8 +64,12 @@ export class UsersListComponent implements OnInit {
   }
 
   onDeleteConfirm(event): void {
-    if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
+    if (window.confirm('Voulez vous vraiment supprimer l\'utilisateur ?')) {
+      this.usersService.deleteUser(event.data.userId).subscribe((resp) => {
+        event.confirm.resolve();
+        alert('Utilisateur supprimé');
+      });
+
     } else {
       event.confirm.reject();
     }

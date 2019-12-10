@@ -37,4 +37,9 @@ export class UsersService {
     );
   }
 
+  deleteUser(userId: string) {
+    const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
+    return this.http.delete(`${environment.url_api}/api/users/delete/${userId}`, { headers });
+  }
+
 }

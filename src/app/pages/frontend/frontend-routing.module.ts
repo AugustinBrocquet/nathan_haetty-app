@@ -19,7 +19,7 @@ const routes: Routes = [
     path: '',
     component: HomeVideoComponent,
   },
-  /*{
+  {
     path: 'home',
     component: FrontendComponent,
   },
@@ -54,7 +54,7 @@ const routes: Routes = [
   {
     path: 'instagram',
     component: InstagramCarouselComponent,
-  },*/
+  },
 ];
 
 @NgModule({
