@@ -6,6 +6,8 @@ import { NbProgressBarModule } from '@nebular/theme';
 import { NbCardModule, NbTreeGridModule, NbIconModule, NbInputModule } from '@nebular/theme';
 import { ThemeModule } from 'src/app/@theme/theme.module';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 
 @NgModule({
@@ -20,6 +22,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     NbInputModule,
     ThemeModule,
     Ng2SmartTableModule,
+    NgxSpinnerModule,
+
   ],
   exports: []
 })

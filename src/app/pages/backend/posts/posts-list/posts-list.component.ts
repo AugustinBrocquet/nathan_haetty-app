@@ -2,6 +2,7 @@ import { PostsService } from "./../../../../shared/services/posts/posts.service"
 import { Component, OnInit } from "@angular/core";
 import { Post } from "src/app/shared/interfaces/post.interface";
 import { Router } from "@angular/router";
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: "app-posts-list",
@@ -11,7 +12,8 @@ import { Router } from "@angular/router";
 export class PostsListComponent implements OnInit {
   settings = {
     actions: {
-      add: false
+      add: false,
+      edit: false,
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -37,6 +39,7 @@ export class PostsListComponent implements OnInit {
   public post = {} as Post;
 
   constructor(
+    private spinner: NgxSpinnerService,
     private readonly postsService: PostsService,
     private router: Router
   ) {}
@@ -51,9 +54,14 @@ export class PostsListComponent implements OnInit {
       });
     });
   }
-  createPost() {
-    this.postsService.createPost(this.post).subscribe(response => {
+  async createPost() {
+    await this.spinner.show();
+    this.postsService.createPost(this.post).subscribe(async (response) => {
+      await this.spinner.hide();
       alert("Collection crée ! ");
+    }, async (e: any) => {
+      await this.spinner.hide();
+      alert("Une erreur est survenue");
     });
   }
   pictureChange(event) {

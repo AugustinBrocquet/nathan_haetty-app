@@ -4,6 +4,7 @@ import { AuthenticationService } from 'src/app/shared/services/authentication/au
 import { Router } from '@angular/router';
 import { LoginUser } from 'src/app/shared/interfaces/login-user.interface';
 import * as moment from 'moment';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -29,20 +30,26 @@ export class LoginComponent extends NbLoginComponent implements OnInit {
     @Inject(NB_AUTH_OPTIONS) protected options: {},
     protected cd: ChangeDetectorRef,
     protected router: Router,
-    private readonly authenticationService: AuthenticationService
+    private readonly authenticationService: AuthenticationService,
+    private spinner: NgxSpinnerService,
   ) {
     super(service, options, cd, router);
   }
 
-  signIn() {
-    this.authenticationService.signIn(this.user).subscribe((response: any) => {
+  async signIn() {
+
+    await this.spinner.show();
+
+    this.authenticationService.signIn(this.user).subscribe(async (response: any) => {
       // console.log(response);
+      await this.spinner.hide();
       localStorage.setItem('jwt-token', response.data.token);
       const expiresAt = moment().add(response.data.expiresIn, 'second');
       localStorage.setItem('expires_at', JSON.stringify(expiresAt.valueOf()));
       this.router.navigate(['/admin/users']);
      //  console.log('redirection');
-    }, (error) => {
+    }, async (error) => {
+      await this.spinner.hide();
       alert('Une erreur est survenue !');
       console.log(error);
     });

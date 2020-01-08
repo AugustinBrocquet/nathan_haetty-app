@@ -22,6 +22,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { InvalidTokenComponent } from './reset-password/invalid-token/invalid-token.component';
 import { ExpiredTokenComponent } from './reset-password/expired-token/expired-token.component';
 import { RegisterComponent } from './register/register.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { RegisterComponent } from './register/register.component';
     NbAuthModule,
     NbLayoutModule,
     NbCardModule,
-    NbSpinnerModule
+    NbSpinnerModule,
+    NgxSpinnerModule
   ],
   declarations: [
     LoginComponent,
