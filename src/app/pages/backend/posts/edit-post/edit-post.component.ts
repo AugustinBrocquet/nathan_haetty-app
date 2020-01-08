@@ -3,6 +3,7 @@ import { PostsService } from 'src/app/shared/services/posts/posts.service';
 import { environment } from 'src/environments/environment';
 import { ActivatedRoute } from '@angular/router';
 import * as BalloonEditor from '@ckeditor/ckeditor5-build-balloon';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-edit-post',
@@ -19,6 +20,7 @@ export class EditPostComponent implements OnInit {
   private isLongPressed = false;
 
   constructor(
+    private spinner: NgxSpinnerService,
     private postsService: PostsService,
     private route: ActivatedRoute,
   ) { }
@@ -35,7 +37,7 @@ export class EditPostComponent implements OnInit {
 
   }
 
-  confirmDeleteSubPicrture(filename){
+  confirmDeleteSubPicrture(filename) {
     if (window.confirm()) {
       this.postsService.deleteSubPicture(this.post._id, filename).subscribe((response) => {
         this.images = this.images.filter((elem) => {
@@ -46,10 +48,15 @@ export class EditPostComponent implements OnInit {
     }
   }
 
-  updatePost() {
-    this.postsService.updatePost(this.post).subscribe(response => {
+  async updatePost() {
+    await this.spinner.show();
+    this.postsService.updatePost(this.post).subscribe(async response => {
+      await this.spinner.hide();
       alert("Collection modifée ! ");
-    });
+    }, (async (e: any) => {
+      await this.spinner.hide();
+      alert("UYne erreur est survenue");
+    }));
   }
   pictureChange(event) {
     this.post.picture = event.target.files[0];

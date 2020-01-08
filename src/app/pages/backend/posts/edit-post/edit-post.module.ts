@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { EditPostComponent } from './edit-post.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { FormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CKEditorModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ]
 })
 export class EditPostModule { }
