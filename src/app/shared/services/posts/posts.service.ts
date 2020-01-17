@@ -28,7 +28,11 @@ export class PostsService {
     formData.append('title', post.title);
     formData.append('description', post.description);
     formData.append('picture', post.picture);
-    if (post.sub_pictures.length) {
+
+    console.log(post);
+
+
+    if (post.sub_pictures) {
 
       for (const file of post.sub_pictures) {
         formData.append('sub_pictures', file);
@@ -51,7 +55,7 @@ export class PostsService {
     formData.append('description', post.description);
     formData.append('picture', post.picture);
 
-    if (post.sub_pictures.length) {
+    if (post.sub_pictures) {
       for (const file of post.sub_pictures) {
         formData.append('sub_pictures', file);
       }
