@@ -38,12 +38,13 @@ export class EditPostComponent implements OnInit {
   }
 
   confirmDeleteSubPicrture(filename) {
-    if (window.confirm()) {
+    if (window.confirm('Voulez-vous vraiment supprimer cette photo ?')) {
       this.postsService.deleteSubPicture(this.post._id, filename).subscribe((response) => {
         this.images = this.images.filter((elem) => {
           return elem !== filename;
         });
         alert('photo supprimée');
+        window.location.reload();
       });
     }
   }
@@ -53,6 +54,8 @@ export class EditPostComponent implements OnInit {
     this.postsService.updatePost(this.post).subscribe(async response => {
       await this.spinner.hide();
       alert("Collection modifée ! ");
+      window.location.reload();
+
     }, (async (e: any) => {
       await this.spinner.hide();
       alert("UYne erreur est survenue");
