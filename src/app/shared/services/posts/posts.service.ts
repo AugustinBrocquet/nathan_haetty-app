@@ -28,9 +28,13 @@ export class PostsService {
     formData.append('title', post.title);
     formData.append('description', post.description);
     formData.append('picture', post.picture);
+    if (post.sub_pictures.length) {
 
-    for (const file of post.sub_pictures) {
-      formData.append('sub_pictures', file);
+      for (const file of post.sub_pictures) {
+        formData.append('sub_pictures', file);
+      }
+    } else {
+      formData.append('sub_pictures', null);
     }
 
     return this.http.post(`${environment.url_api}/api/posts`, formData, { headers });
@@ -47,8 +51,12 @@ export class PostsService {
     formData.append('description', post.description);
     formData.append('picture', post.picture);
 
-    for (const file of post.sub_pictures) {
-      formData.append('sub_pictures', file);
+    if (post.sub_pictures.length) {
+      for (const file of post.sub_pictures) {
+        formData.append('sub_pictures', file);
+      }
+    } else {
+      formData.append('sub_pictures', null);
     }
 
     return this.http.put(`${environment.url_api}/api/posts/update`, formData, { headers });
@@ -61,7 +69,7 @@ export class PostsService {
 
   deleteSubPicture(postId, filename) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.put(`${environment.url_api}/api/posts/delete-subpicture`, {postId, filename}, { headers });
+    return this.http.put(`${environment.url_api}/api/posts/delete-subpicture`, { postId, filename }, { headers });
 
   }
 
