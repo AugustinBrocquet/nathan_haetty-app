@@ -58,7 +58,7 @@ export class EditPostComponent implements OnInit {
 
     }, (async (e: any) => {
       await this.spinner.hide();
-      alert("UYne erreur est survenue");
+      alert("Une erreur est survenue");
     }));
   }
   pictureChange(event) {

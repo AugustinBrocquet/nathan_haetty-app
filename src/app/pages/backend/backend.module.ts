@@ -15,6 +15,7 @@ import { VideosListModule } from './videos/videos-list/videos-list.module';
 import { StoryModule } from './story/story.module';
 import { ViewMessageModule } from './messages/view-message/view-message.module';
 import { EditPostModule } from './posts/edit-post/edit-post.module';
+import { EditVideoModule } from './videos/edit-video/edit-video/edit-video.module';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { EditPostModule } from './posts/edit-post/edit-post.module';
     StoryModule,
     ViewMessageModule,
     ViewUserModule,
+    EditVideoModule,
     NbCardModule,
     NbTreeGridModule,
     NbIconModule,

@@ -1,0 +1,28 @@
+<form>
+  <h2>Modifier une vidéo : </h2>
+  <br>
+  <div class="form-group">
+    <label for="titleVideo">Titre</label>
+    <input name="title" [(ngModel)]="video.title" type="text" class="form-control" id="titleVideo"
+      aria-describedby="emailHelp" placeholder="Titre">
+  </div>
+  <div class="form-group">
+    <label for="descriptionVideo">Description</label>
+    <input name="description" [(ngModel)]="video.description" type="text" class="form-control" id="descriptionVideo"
+      placeholder="Description">
+  </div>
+  <div class="form-group">
+    <div class="card-body">
+      <h5 class="card-title">{{ video.title }}</h5>
+      <youtube-player *ngIf="video.embed" [videoId]="video.embed"></youtube-player>
+      <p class="card-text">{{ video.description }}</p>
+    </div>
+    <label for="descriptionVideo">Lien Youtube</label>
+    <input name="path_youtube" [(ngModel)]="video.path_youtube" type="text" class="form-control" id="pathYoutubeVideo"
+      placeholder="Veuillez coller l'url Youtube ici">
+  </div>
+  <button type="button" (click)="updateVideo()" class="btn btn-primary">Modifier</button>
+</form>
+
+<ngx-spinner size="default" color="#fff" type="ball-pulse-sync" [fullScreen]="false"></ngx-spinner>
+

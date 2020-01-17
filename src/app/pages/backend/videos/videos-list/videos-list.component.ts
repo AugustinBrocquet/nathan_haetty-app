@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Video } from "src/app/shared/interfaces/video.interface";
 import { VideosService } from "src/app/shared/services/videos/videos.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-videos-list",
@@ -50,7 +51,7 @@ export class VideosListComponent implements OnInit {
   public videos: any[] = [];
   public video = {} as Video;
 
-  constructor(private readonly videosService: VideosService) {}
+  constructor(private readonly videosService: VideosService, private router: Router) {}
 
   ngOnInit() {
     this.videosService.getVideos().subscribe((data: any) => {
@@ -83,8 +84,8 @@ export class VideosListComponent implements OnInit {
   }
 
   goToViewVideo(event): void {
-    // console.log(event);
+     console.log(event.data);
     // console.log(`video/${event.data.videoId}`);
-    // this.router.navigate([`/admin/user/${event.data.userId}`]);
+    this.router.navigate([`/admin/video/${event.data.videoId}`]);
   }
 }

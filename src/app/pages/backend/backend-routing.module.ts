@@ -12,6 +12,7 @@ import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import { VideosListComponent } from './videos/videos-list/videos-list.component';
 import { StoryComponent } from './story/story.component';
 import { EditPostComponent } from './posts/edit-post/edit-post.component';
+import { EditVideoComponent } from './videos/edit-video/edit-video/edit-video.component';
 
 
 const routes: Routes = [{
@@ -51,6 +52,10 @@ const routes: Routes = [{
     {
       path: 'videos',
       component: VideosListComponent,
+    },
+    {
+      path: 'video/:videoId',
+      component: EditVideoComponent,
     },
     {
       path: 'story',
