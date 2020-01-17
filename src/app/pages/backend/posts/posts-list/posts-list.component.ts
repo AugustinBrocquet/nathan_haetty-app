@@ -59,6 +59,7 @@ export class PostsListComponent implements OnInit {
     this.postsService.createPost(this.post).subscribe(async (response) => {
       await this.spinner.hide();
       alert("Collection crée ! ");
+      window.location.reload();
     }, async (e: any) => {
       await this.spinner.hide();
       alert("Une erreur est survenue");
@@ -80,6 +81,7 @@ export class PostsListComponent implements OnInit {
       event.confirm.resolve();
       this.postsService.deletePost(event.data.postId).subscribe(() => {
         alert("Suppression réussie !");
+        window.location.reload();
       });
     } else {
       event.confirm.reject();
