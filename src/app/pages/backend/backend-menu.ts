@@ -4,28 +4,33 @@ import { NbMenuItem } from '@nebular/theme';
 export const MENU_ITEMS: NbMenuItem[] = [
   {
     title: 'Utilisateurs',
-    icon: 'shopping-cart-outline',
+    icon: 'people-outline',
     link: '/admin/users',
     home: true
   },
   {
     title: 'Messages',
-    icon: 'shopping-cart-outline',
+    icon: 'message-circle-outline',
     link: '/admin/messages',
   },
   {
     title: 'Collection',
-    icon: 'shopping-cart-outline',
+    icon: 'image-outline',
     link: '/admin/posts',
   },
   {
     title: 'Vidéos',
-    icon: 'shopping-cart-outline',
+    icon: 'video-outline',
     link: '/admin/videos',
   },
   {
     title: 'Histoire',
-    icon: 'shopping-cart-outline',
+    icon: 'book-open-outline',
     link: '/admin/story',
   },
+  {
+    title: 'Wallpapers',
+    icon: 'image-outline',
+    link: '/admin/wallpapers',
+  }
 ];

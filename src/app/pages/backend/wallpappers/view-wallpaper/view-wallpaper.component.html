@@ -1,1 +1,31 @@
-<p>view-wallpaper works!</p>
+<h1>Modification</h1>
+<div class="form-group">
+  <img src="{{ baseUrl }}/img/{{ wallpaper.currentPicture }}" class="card-img-top" style="width: 65%; padding: 1em;" alt="..." />
+</div>
+  <form>
+    <br />
+    <!--<div class="form-group">
+      <label for="titleWallpaper">Titre</label>
+      <input name="title" [(ngModel)]="wallpaper.title" type="text" class="form-control" id="titleWallpaper"
+        aria-describedby="emailHelp" placeholder="Titre" />
+    </div> -->
+
+    <div class="form-group">
+      <label for="pictureWallpaper">Photo</label>
+      <input name="picture" (change)="pictureChange($event)" type="file" class="form-control" id="pictureWallpaper"
+        placeholder="Photo principale" />
+    </div>
+
+    <button type="button" (click)="updateWallpaper()" class="btn btn-primary">
+      Enregistrer
+    </button>
+  </form>
+  <br />
+  <ngx-spinner size="default" color="#fff" type="ball-pulse-sync" [fullScreen]="false"></ngx-spinner>
+
+
+
+
+
+
+<ngx-spinner size="default" color="#fff" type="ball-pulse-sync" [fullScreen]="false"></ngx-spinner>

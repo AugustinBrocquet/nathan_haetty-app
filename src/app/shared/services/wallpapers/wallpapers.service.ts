@@ -31,9 +31,15 @@ export class WallpapersService {
     return this.http.post(`${environment.url_api}/api/wallpapers$`, formData, { headers });
   }
 
-  updateWallpaper(wallpaper: Wallpaper) {
+  updateWallpaper(wallpaper: any) {
     const headers = new HttpHeaders().set('Authorization', 'Bearer ' + localStorage.getItem('jwt-token'));
-    return this.http.post(`${environment.url_api}/api/wallpapers/update`, wallpaper, { headers });
+
+    const formData = new FormData();
+    formData.append('wallpaperId', wallpaper.wallpaperId);
+    formData.append('path_image', wallpaper.path_image);
+
+
+    return this.http.put(`${environment.url_api}/api/wallpapers/update`, formData, { headers });
   }
 
   deleteWallpaper(wallpaperId: string) {

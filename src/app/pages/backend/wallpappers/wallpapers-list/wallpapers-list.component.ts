@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { WallpapersService } from "src/app/shared/services/wallpapers/wallpapers.service";
 import { Wallpaper } from "src/app/shared/interfaces/wallpaper.interface";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-wallpapers-list",
@@ -9,24 +10,16 @@ import { Wallpaper } from "src/app/shared/interfaces/wallpaper.interface";
 })
 export class WallpapersListComponent implements OnInit {
   settings = {
-    /*add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },*/
-    /*edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },*/
-    add: false,
-    edit: false,
+    actions: {
+      add: false,
+      edit: false,
+    },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true
     },
     columns: {
-      postId: {
+      wallpaperId: {
         title: "ID",
         type: "number"
       },
@@ -34,7 +27,7 @@ export class WallpapersListComponent implements OnInit {
         title: "Titre",
         type: "string"
       },
-      picture: {
+      path_image: {
         title: "Photo",
         type: "string"
       }
@@ -44,7 +37,7 @@ export class WallpapersListComponent implements OnInit {
   public wallpapers: any[] = [];
   public wallpaper = {} as Wallpaper;
 
-  constructor(private readonly wallpapersService: WallpapersService) {}
+  constructor(private router: Router, private readonly wallpapersService: WallpapersService) {}
 
   ngOnInit() {
     this.wallpapersService.getWallpapers().subscribe((data: any) => {
@@ -84,5 +77,7 @@ export class WallpapersListComponent implements OnInit {
       event.confirm.reject();
     }
   }
-  goToViewWallpaper(event: any) {}
+  goToViewWallpaper(event: any) {
+    this.router.navigate([`/admin/wallpaper/${event.data.wallpaperId}`]);
+  }
 }

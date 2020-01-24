@@ -13,6 +13,7 @@ import { VideosListComponent } from './videos/videos-list/videos-list.component'
 import { StoryComponent } from './story/story.component';
 import { EditPostComponent } from './posts/edit-post/edit-post.component';
 import { EditVideoComponent } from './videos/edit-video/edit-video/edit-video.component';
+import { ViewWallpaperComponent } from './wallpappers/view-wallpaper/view-wallpaper.component';
 
 
 const routes: Routes = [{
@@ -40,6 +41,10 @@ const routes: Routes = [{
     {
       path: 'wallpapers',
       component: WallpapersListComponent,
+    },
+    {
+      path: 'wallpaper/:wallpaperId',
+      component: ViewWallpaperComponent,
     },
     {
       path: 'posts',
