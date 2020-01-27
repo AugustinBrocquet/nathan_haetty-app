@@ -13,7 +13,7 @@
     <div class="row" id="wallpaper_galerie">
 
         <div *ngFor="let wallpaper of wallpapers; let i=index" class="col-sm-4 animated pulse">
-            <img src="{{baseUrl}}/img/{{wallpaper.path_image}}" (click)="open(i)">
+            <img src="{{baseUrl}}/{{wallpaper.path_image}}" (click)="open(i)">
         </div>
 
     </div>

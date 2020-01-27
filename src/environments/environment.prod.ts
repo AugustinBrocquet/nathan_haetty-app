@@ -13,4 +13,5 @@ export const environment = {
     },
   },
   url_api: 'https://nathan-haetty-server.herokuapp.com',
+  url_img: 'https://nathanhaetty.com/uploads/img/'
 };

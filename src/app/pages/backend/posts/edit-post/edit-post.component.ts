@@ -13,7 +13,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 export class EditPostComponent implements OnInit {
   public images: any = [];
   public post = {} as any;
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
   public Editor = BalloonEditor;
   public editorConfig = {
   };

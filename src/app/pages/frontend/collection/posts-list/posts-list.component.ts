@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 export class PostsListComponent implements OnInit, AfterViewInit {
 
   public posts: any[] = [];
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
 
   constructor(private readonly postsService: PostsService) { }
 

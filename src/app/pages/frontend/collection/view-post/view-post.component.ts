@@ -15,7 +15,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
 
 
   public post: any;
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
 
   constructor(private lightbox: Lightbox, private readonly postsService: PostsService, private route: ActivatedRoute) { }
 
@@ -26,7 +26,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
         this.images.push({
           src: `${this.baseUrl}/img/${item}`,
           caption: ``,
-          thumb: `${this.baseUrl}/img/${item}`
+          thumb: `${this.baseUrl}/${item}`
         });
         console.log(this.images)
       });

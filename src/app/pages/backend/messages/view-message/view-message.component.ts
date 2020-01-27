@@ -14,7 +14,7 @@ export class ViewMessageComponent implements OnInit {
   public images: Array<object> = [];
 
   public message: any;
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
 
   constructor(private readonly messagesService: MessagesService, private route: ActivatedRoute) { }
 
@@ -24,7 +24,7 @@ export class ViewMessageComponent implements OnInit {
       this.message.pictures.forEach(item => {
         const img = {} as any;
         img.image = item;
-        img.thumbImage = `${this.baseUrl}/img/${item}`;
+        img.thumbImage = `${this.baseUrl}/${item}`;
         this.images.push(img);
       });
 

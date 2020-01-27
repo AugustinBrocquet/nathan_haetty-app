@@ -11,7 +11,7 @@ import { Lightbox } from 'ngx-lightbox';
 export class WallpapersComponent implements OnInit, AfterViewInit {
   private albums: any = [];
   public wallpapers: any = [];
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
   constructor(private readonly wallpapersService: WallpapersService, private lightbox: Lightbox) { }
 
   ngOnInit() {

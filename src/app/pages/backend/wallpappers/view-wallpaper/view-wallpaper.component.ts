@@ -12,7 +12,7 @@ import { environment } from 'src/environments/environment';
 export class ViewWallpaperComponent implements OnInit {
 
   public wallpaper = {} as any;
-  public baseUrl = environment.url_api;
+  public baseUrl = environment.url_img;
 
 
   constructor(

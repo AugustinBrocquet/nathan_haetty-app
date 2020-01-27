@@ -6,13 +6,13 @@
   <div [innerHtml]="post.description"></div>
 
 
-  <img src="{{ baseUrl }}/img/{{ post.picture }}" class="card-img-top" style="width: 65%; padding: 1em;" alt="..." />
+  <img src="{{ baseUrl }}/{{ post.picture }}" class="card-img-top" style="width: 65%; padding: 1em;" alt="..." />
   <hr />
 
   <div class="container">
     <div class="row">
       <div class="col-2" *ngFor="let sub_image of images">
-        <img (click)="confirmDeleteSubPicrture(sub_image)" src="{{ baseUrl }}/img/{{ sub_image }}" class="card-img-top" style="padding: 1em;"
+        <img (click)="confirmDeleteSubPicrture(sub_image)" src="{{ baseUrl }}/{{ sub_image }}" class="card-img-top" style="padding: 1em;"
           alt="..." />
       </div>
     </div>
