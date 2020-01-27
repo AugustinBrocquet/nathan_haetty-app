@@ -28,7 +28,7 @@ export class WallpapersService {
     formData.append('title', wallpaper.title);
     formData.append('path_image', wallpaper.path_image);
 
-    return this.http.post(`${environment.url_api}/api/wallpapers$`, formData, { headers });
+    return this.http.post(`${environment.url_api}/api/wallpapers`, formData, { headers });
   }
 
   updateWallpaper(wallpaper: any) {
