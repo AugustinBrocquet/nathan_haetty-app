@@ -116,6 +116,21 @@
   }
 }
 
+@media screen and (max-width: 1250px) {
+  .footer-copyright{
+    padding-bottom : 5% !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  .footer-copyright{
+    padding-bottom : 0% !important;
+  }
+  #myFooter{
+    position: fixed;
+    bottom:0;
+  }
+}
+
 
 
 /* CSS used for positioning the footers at the bottom of the page. */

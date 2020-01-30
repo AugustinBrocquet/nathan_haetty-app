@@ -17,7 +17,7 @@
 }
 .video-foreground,
 .video-background iframe {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -27,7 +27,7 @@
 
 @media (max-width: 640px) {
     .video-background{
-      background-image: url("../../../assets/frontend/img/nathan/home-page-mobile.jpg"); 
+      background-image: url("../../../assets/frontend/img/nathan/home-page-mobile.jpg");
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

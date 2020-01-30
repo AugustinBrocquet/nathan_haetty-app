@@ -4,7 +4,7 @@ a {
   height: 100%;
 }
 
-.col-6 {
+.col-sm-6 {
   margin-bottom: 6%;
 }
 
@@ -23,6 +23,12 @@ a {
   height: 115px;
 }
 
-.card-img-top{
-  min-height: 173.10px;
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFCC00;
+}
+html {
+  height: 100%;
 }
