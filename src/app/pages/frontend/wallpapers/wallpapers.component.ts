@@ -21,9 +21,9 @@ export class WallpapersComponent implements OnInit, AfterViewInit {
 
       this.wallpapers.map((wallpaper) => {
         const album = {
-          src: `${this.baseUrl}/img/${wallpaper.path_image}`,
+          src: `${this.baseUrl}/${wallpaper.path_image}`,
           caption: ``,
-          thumb: `${this.baseUrl}/img/${wallpaper.path_image}`,
+          thumb: `${this.baseUrl}/${wallpaper.path_image}`,
         };
 
         this.albums.push(album);
