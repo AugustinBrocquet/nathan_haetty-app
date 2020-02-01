@@ -21,7 +21,7 @@
   </div>
   <div id="description_view_post" class="container">
     <div>
-      <p id="title">{{post.title}}</p>
+      <p *ngIf="post.title" id="title">{{post.title}}</p>
       <span [innerHtml]="post.description"></span>
     </div>
   </div>

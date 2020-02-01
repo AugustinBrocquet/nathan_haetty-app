@@ -24,7 +24,7 @@ export class ViewPostComponent implements OnInit, AfterViewInit {
       this.post = data;
       this.post.sub_pictures.forEach(item => {
         this.images.push({
-          src: `${this.baseUrl}/img/${item}`,
+          src: `${this.baseUrl}/${item}`,
           caption: ``,
           thumb: `${this.baseUrl}/${item}`
         });
