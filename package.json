@@ -51,7 +51,7 @@
     "ngx-spinner": "^8.1.0",
     "ngx-useful-swiper": "^8.0.1",
     "ngx-youtube-player": "^7.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "path": "^0.12.7",
     "rm": "^0.1.8",
     "roboto-fontface": "^0.10.0",
