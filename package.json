@@ -38,7 +38,7 @@
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "nebular-icons": "^1.1.0",
     "ng-image-slider": "^2.0.3",
     "ng2-completer": "^3.0.2",
